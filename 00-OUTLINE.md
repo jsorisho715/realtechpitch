@@ -148,7 +148,7 @@ Total: **45 slides** (was 44 before NDA pause was added).
 
 - **Layout:** `L9-TeamGrid` (re-purposed as a 3×4 product grid)
 - **Entry animation:** `fadeUpStagger` with `--stagger-tight` (60ms apart for the 12 cards) + `cardTilt3D` on hover
-- **Visual:** 12-card grid. Each card: app logo + one-sentence tagline + Build %. Cards: Real Tech (parent), Real Tech GTM, Rovian, Wedding Planner AI, DealPayment, Kith, edgenote, HighTide, Baby Tracker, Channel Partner Portal (concept), Rehabit (concept), n8n GTM workflows.
+- **Visual:** 12-card grid. Each card: app logo + one-sentence tagline + Build %. Cards: Real Tech (parent), Real Tech GTM, Rovian, Wedding Planner AI, DealPayment, Kith, edgenote, HighTide, Baby Tracker, Channel Partner Portal (concept), Rehabit (concept), Always-on Outbound (11 workflows).
 
 **Headline:** *Eleven shipped artifacts. One studio.*
 
@@ -275,14 +275,14 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 
 ### Slide 11 — #1 Real Tech GTM (productize what we already use)
 
-- **Visual:** Screenshot of [`Realtech2/Real-tech-llc-portfolio/app/admin/gtm`](../Realtech2/Real-tech-llc-portfolio/app/admin/gtm) admin dashboard — captured locally per [`screenshots/README.md`](screenshots/README.md). Inset chip showing "11 n8n workflows live."
+- **Visual:** Screenshot of [`Realtech2/Real-tech-llc-portfolio/app/admin/gtm`](../Realtech2/Real-tech-llc-portfolio/app/admin/gtm) admin dashboard — captured locally per [`screenshots/README.md`](screenshots/README.md). Inset chip showing "Always-on outbound · 11 live workflows"
 - **Tagline:** *"The CRM your agency wishes it had — automated by the workflow engine your competitors can't ship."*
 - **Problem / Target customer:** Boutique consultancies, founders running outbound, marketing agencies — all running manual sequences across 5+ tools.
-- **Solution:** End-to-end GTM stack: lead capture → enrichment → sequenced outreach → call booking → CRM sync. Powered by 11 n8n workflows + 8 admin pages.
+- **Solution:** End-to-end GTM stack: lead capture → enrichment → sequenced outreach → call booking → CRM sync. One stack: prospects, researches, writes with AI, sends, follows up, triages replies, publishes content. 11 always-on workflows + 8 admin pages.
 - **Market size:** GTM/sales tooling — multi-billion category (Apollo $1.6B valuation, Clay $500M+, HubSpot Operations Hub mid-9-figures revenue). Target SOM $10M ARR within 3 years on a long tail of agencies.
 - **Top 3 competitors + our gap:** [Apollo.io](https://apollo.io) (database-led, weak workflow), [Clay.com](https://clay.com) (workflow-led, dependent on multiple tools), [HubSpot Operations Hub](https://hubspot.com/products/operations) (suite-locked). Our gap: **end-to-end + agency-native + we eat our own dog food**.
-- **Moat:** Already integrated into 11 n8n workflows we use to sell consulting; productization speed is unfair.
-- **Build status:** ~70% — admin pages built, n8n live, billing/multi-tenancy still to wire.
+- **Moat:** Productized 11 always-on workflows we use to sell consulting; the workflow library is the unfakeable moat.
+- **Build status:** ~70% — admin pages built, automations live, billing/multi-tenancy still to wire.
 - **Path to first $10k MRR:** 50 customers @ $200/mo. Channel: warm-intro to Real Tech consulting clients + agencies in Justin's network.
 - **Channel Readiness:** Real Tech consulting client list + agency network; no third-party gating.
 - **Founder lead:** Jonathan + Halim ([Jonathan LinkedIn](https://www.linkedin.com/in/johnathan-sorisho-a2110052/))
@@ -537,7 +537,7 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 1. **AI tailwinds** — generation cost collapsed; integration is the new differentiation
 2. **Voice** — Vapi-class infra makes vertical voice agents cheap
 3. **Local-first** — privacy backlash + on-device LLMs = edgenote-style category emerging
-4. **Automation** — every business wants n8n-class workflows but can't operate them solo
+4. **Automation** — every business wants always-on AI-driven workflows but can't operate them solo
 5. **Multifamily proptech** — the multifamily proptech employer NYSE listing validated the category; vendor layer still empty
 
 **Links footer:** [cbinsights.com](https://www.cbinsights.com) · [nmhc.org](https://www.nmhc.org) · [theknotworldwide.com](https://www.theknotworldwide.com/about) · [vapi.ai](https://vapi.ai)
@@ -553,7 +553,7 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 **Headline:** *Two finalists. Two positioning statements.*
 
 **Left block — Path A finalist 1: Real Tech GTM**
-> *"For boutique consultancies and lean BD teams, Real Tech GTM is the agency-native CRM + outbound engine — already battle-tested running our own consulting outreach. Unlike Apollo's database or Clay's workflow chains, Real Tech GTM is one stack with eleven n8n workflows live, owned end-to-end."*
+> *"For boutique consultancies and lean BD teams, Real Tech GTM is the agency-native CRM + outbound engine — already battle-tested running our own consulting outreach. Unlike Apollo's database or Clay's workflow chains, Real Tech GTM is one stack that prospects, writes, sends, follows up, and publishes — autonomously. Eleven live automations, owned end-to-end."*
 
 **Right block — Path A finalist 2: Channel Partner Portal**
 > *"For multifamily property operators managing vendors at scale, Channel Partner Portal is the operator-vendor connective tissue the category doesn't ship. Built by three current multifamily proptech VPs and a product director — 51 combined years of multifamily proptech, with 850K+ homes touched."*
@@ -721,13 +721,13 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 ### Slide 33 — Content Engine (Meta Proof)
 
 - **Layout:** `L4-TwoColumn` (content left, visual right)
-- **Entry animation:** `fadeUpStagger`; n8n workflow card `imageBlurReveal`
-- **Visual:** Right column — annotated screenshot of a single n8n workflow doing outbound + enrichment + sequencing for Real Tech itself. A small inset shows the 11 workflows in the GTM admin.
+- **Entry animation:** `fadeUpStagger`; workflow card `imageBlurReveal`
+- **Visual:** Right column — annotated screenshot of a single workflow doing outbound + enrichment + sequencing for Real Tech itself. A small inset shows the 11 workflows in the GTM admin.
 
 **Headline:** *Our GTM tool runs our own outreach. That's the demo.*
 
 **Body bullets:**
-- **11 n8n workflows live**, doing what would be a $200/mo Apollo + $100/mo Clay + manual hand-stitching at any other agency
+- **An autonomous outbound team in software** — does what $200/mo Apollo + $100/mo Clay + a $4–8k/mo RevOps hire would do at any other agency. 11 live workflows running 24/7.
 - Sample sequence outputs hyperlinked from the deck
 - Open-source playbooks published periodically (content + SEO compounding)
 

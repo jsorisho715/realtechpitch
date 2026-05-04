@@ -26,10 +26,30 @@ One page per app. Sourced from live sites, codebases, and your channel-readiness
 
 **Target customer:** B2B agencies, consulting firms, and 10-50 person SaaS teams. Secondary: SMBs who'd otherwise hire a fractional CMO.
 
-**Solution:** A unified GTM platform built on n8n workflows + Anthropic Claude + Resend + Supabase. One tool replaces 5. Already running our own outbound — eat-your-own-dog-food.
+**Solution:** Always-on outbound + content engine. One stack, runs itself: finds prospects, researches each one, writes outreach with AI, sends + follows up, triages replies, monitors engagement, publishes content. Replaces Apollo + Clay + HubSpot + a CMS + a video tool. Already running our own outbound — eat-your-own-dog-food.
 
-**What's already built:**
-- 11 n8n workflows: lead-scraper, website-scraper, email-campaign-sender, follow-up, reply-monitor, auto-responder, content-generation, engagement-monitor, repo-extraction, website-intelligence, passive-intelligence, auto-distribution
+**What's already built — 11 always-on workflows that sell, in plain English:**
+
+| # | Workflow | What it does (pitch language) |
+|---|----------|-------------------------------|
+| 1 | **lead-scraper** | Finds the right prospects — pulls leads from public sources matching your ICP |
+| 2 | **website-scraper** | Reads each prospect's website to understand who they are |
+| 3 | **website-intelligence** | Deep-research on prospect companies (tech stack, hiring signals, fit) |
+| 4 | **passive-intelligence** | Watches for trigger events (news, raises, exec changes) for timely outreach |
+| 5 | **repo-extraction** | Mines public GitHub repos for technical-buyer signals |
+| 6 | **content-generation** | AI-writes custom one-pagers, emails, blog posts (Claude) |
+| 7 | **email-campaign-sender** | Sends sequenced outreach across personalized segments |
+| 8 | **follow-up** | Automated, tasteful follow-ups so leads never go cold |
+| 9 | **reply-monitor** | Reads inbound replies + categorizes intent (interested / not / out of office) |
+| 10 | **auto-responder** | Responds intelligently to qualified replies; routes hot leads to a human |
+| 11 | **engagement-monitor** | Tracks who's actually opening, clicking, scrolling |
+| 12 | **auto-distribution** | Publishes content across channels (email, social, web) |
+
+(11 named workflows + the distribution layer = 12 total live; the deck rounds to "11 live automations" for the headline.)
+
+**Built on:** Workflow orchestration + Anthropic Claude (writing/intelligence) + Resend (email) + Supabase (data). Customers don't see or care about the underlying tools — they see the outcome.
+
+**Surface (what the user actually touches):**
 - 8 admin pages: `/admin/gtm/{intelligence, emails, campaigns, factory, one-pagers, distribution, analytics, video, responses}`
 - AI-powered output renderers: launch-plan, sales-enablement, partnership-strategist, customer-success, pricing-strategist, lead-gen-content, swot-analysis, growth-strategist
 - Live at `realtechconsultant.com/admin/gtm` (auth required)
@@ -45,7 +65,7 @@ One page per app. Sourced from live sites, codebases, and your channel-readiness
 **Top 3 competitors:** Apollo.io, Clay.com, HubSpot Operations Hub. Our gap: integrated content + outbound + intelligence; theirs are point tools.
 
 **Moat:**
-- Workflow library (11 n8n flows) is the asset
+- The 11-workflow library + AI orchestration is the asset (hard to replicate; took 6+ months to wire end-to-end)
 - Brand: "we use this to land you" is unfakeable proof
 - Switching cost rises as customer's data accumulates in our intelligence layer
 
@@ -57,7 +77,7 @@ One page per app. Sourced from live sites, codebases, and your channel-readiness
 
 **Adoption likelihood:** **9/10** — built, eats own dog food, fast-to-revenue, founder-market fit perfect.
 
-**Risks:** Apollo/Clay race down-market with AI agents; n8n adoption barrier for non-technical buyers (we mask it).
+**Risks:** Apollo/Clay race down-market with AI agents; underlying workflow tools require operator setup (we mask it — customers see only the GTM admin UI, never the orchestration).
 
 ---
 
