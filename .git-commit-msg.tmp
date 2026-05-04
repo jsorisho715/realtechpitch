@@ -1,0 +1,61 @@
+Even playing field for apps + expand FMF matrix + SmartRent risk slide
+
+Three changes from the cofounder review:
+
+1. Even playing field on per-app slides
+   - Removed "#N adoption likelihood" rank pills from all 10 app slides
+   - Replaced with neutral status descriptors (Live, Built, In dev, Concept,
+     Bundle, etc.) so cofounders form their own view from the visual without
+     anchoring on the score order
+   - Section 4 divider re-titled "The Buffet" with subtitle:
+     "All eleven on equal footing. Pick your favorites - the scorecard
+     is just one input."
+   - Adoption score still shown in the inline stat-row chip on each app
+     slide for analytical reference, but no longer the headline
+
+2. Founder-Market Fit matrix expanded to all 11 apps (slide 22)
+   - Was: 5 cards (Channel Portal, GTM, DealPayment, Wedding combo, Rehabit)
+   - Now: 11 cards, one per app + Life Events Suite as a separate card
+   - New compact card design (4-col grid at desktop) with primary fit
+     line + secondary fit line + lane note
+   - "SR" badge inline on each SmartRent founder mention; gold "Killer fit"
+     badge on the 3 strongest team-coverage apps
+   - Channel Partner Portal card carries an inline coral risk-flag pointing
+     at slide 23 (the new SmartRent slide)
+
+3. NEW SmartRent Considerations slide (slide 23) + supporting doc
+   - Comes right after the FMF matrix
+   - Cites three handbook clauses verbatim: Section 1.6 Conflicts of Interest,
+     Section 1.10 Outside Employment, Section 3.5 Corporate Opportunities
+     (Oct 2025 SmartRent Employee Handbook)
+   - Per-app risk read: HIGH for Channel Partner Portal (multifamily
+     operator surface overlap), LOW for the other 10 apps, DISCLOSE for
+     Real Tech Consulting parent
+   - Four disposition paths for Channel Portal:
+       A. Drop  B. Defer to post-departure
+       C. Get SmartRent Legal Department approval (recommended)
+       D. Re-scope away from overlap (commercial RE / HOA / hospitality)
+   - "What we agree today" operating rules block (no SmartRent customer
+     activation, no SmartRent confidential info into Real Tech, NDA
+     Section 7 already protects this)
+   - Linked supporting doc: legal/SmartRent-considerations.md (full
+     handbook citations + per-app risk table + disposition decision tree)
+
+Cross-slide updates:
+- Channel Partner Portal app slide now shows inline coral
+  "SmartRent risk - see slide 23" warning in the header
+- Top 2 Recommended (slide 27): Path A "Give up" line now reads
+  "Slower to first revenue + requires SmartRent disposition decision
+  (slide 23)"; Path B explicitly notes "No SmartRent overlap risk"
+- 05-founder-market-fit.md gets a callout block pointing to the new
+  SmartRent considerations doc
+- legal/SmartRent-considerations.md (new): 11 sections covering the
+  handbook clauses, per-app risk read, four disposition options,
+  operating rules, and recommended next steps. Explicitly disclaimed
+  as not legal advice; flagged for Tim's counsel review.
+
+CSS additions:
+- .fmf-grid + .fmf-card.killer-fit (gold ring, killer-badge)
+- .fmf-card .risk-flag (coral chip for the SmartRent warning)
+- .layout-considerations + .disposition-grid + .disp-card.recommended
+  (the new slide's risk + 4-path disposition layout)

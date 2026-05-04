@@ -1248,40 +1248,244 @@
 .rank-pill .rank-num { color: var(--color-accent); }
 
 /* -----------------------------------------------------------------------------
-   11. Star ratings (Founder-Market Fit matrix on phone)
+   11. Founder-Market Fit Matrix — compact card grid (covers all 11 apps)
    -------------------------------------------------------------------------- */
+
+.fmf-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--sp-3);
+  flex: 1;
+  align-content: start;
+  min-height: 0;
+}
+@media (min-width: 480px) {
+  .fmf-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 768px) {
+  .fmf-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1280px) {
+  .fmf-grid { grid-template-columns: repeat(4, 1fr); }
+}
 
 .fmf-card {
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--r-card);
-  padding: var(--sp-4);
-  margin-block-end: var(--sp-3);
+  padding: var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  position: relative;
+  font-size: 0.8125rem;
+  line-height: 1.35;
 }
 .fmf-card.unfair {
   border-color: var(--color-accent);
-  box-shadow: 0 8px 24px rgba(202, 138, 4, 0.10);
+  background: rgba(202, 138, 4, 0.04);
+  box-shadow: 0 4px 12px rgba(202, 138, 4, 0.10);
 }
-.fmf-card .app-line {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-block-end: var(--sp-3);
+.fmf-card.killer-fit {
+  border-color: var(--color-primary);
+  background: linear-gradient(180deg, rgba(50, 189, 205, 0.06) 0%, rgba(30, 58, 138, 0.04) 100%);
+  box-shadow: 0 8px 20px rgba(30, 58, 138, 0.15);
+}
+.fmf-card .killer-badge {
+  position: absolute;
+  top: -8px;
+  right: var(--sp-3);
+  background: var(--gradient-premium);
+  color: var(--rt-white);
+  font-family: var(--font-sans);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: var(--r-pill);
+  white-space: nowrap;
+}
+.fmf-card .risk-flag {
+  display: inline-block;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-danger);
+  background: rgba(240, 102, 102, 0.10);
+  padding: 1px 6px;
+  border-radius: var(--r-chip);
+  margin-block-start: 4px;
 }
 .fmf-card .app-name {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: var(--font-h1);
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin: 0;
+  padding-inline-end: 60px; /* room for killer-badge */
+}
+.fmf-card.killer-fit .app-name { color: var(--color-primary); }
+.fmf-card .fit-line {
+  display: block;
+  margin: 0;
+}
+.fmf-card .fit-line .stars {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  margin-inline-end: 4px;
+}
+.fmf-card .fit-line.secondary .stars {
+  color: var(--color-fg-muted);
+  opacity: 0.85;
+}
+.fmf-card .fit-line .who {
+  color: var(--color-fg);
+  font-weight: 500;
+}
+.fmf-card .fit-line.secondary .who {
+  color: var(--color-fg-muted);
+}
+.fmf-card .lane-note {
+  margin: 0;
+  margin-block-start: 4px;
+  font-size: 0.75rem;
+  color: var(--color-fg-muted);
+  font-style: italic;
+  line-height: 1.35;
+  padding-block-start: 4px;
+  border-block-start: 1px solid var(--color-border);
+}
+
+/* SmartRent badge inline in cards */
+.fmf-card .who.smartrent::after {
+  content: " \00B7 SR";
+  color: var(--color-success);
+  font-weight: 700;
+  font-size: 0.625rem;
+  letter-spacing: 0.04em;
+}
+
+/* -----------------------------------------------------------------------------
+   12. SmartRent Considerations slide — risk / disposition layout
+   -------------------------------------------------------------------------- */
+
+.layout-considerations {
+  background: var(--color-bg);
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-rows: auto auto 1fr auto;
+  overflow: hidden;
+}
+.layout-considerations h1 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+}
+.layout-considerations h1 .risk-stripe {
+  display: inline-block;
+  background: var(--color-danger);
+  color: var(--rt-white);
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: var(--r-chip);
+}
+.considerations-body {
+  display: grid;
+  gap: var(--sp-4);
+  grid-template-columns: 1fr;
+  align-items: start;
+  min-height: 0;
+}
+@media (min-width: 768px) {
+  .considerations-body { grid-template-columns: 1.05fr 1fr; }
+}
+.consid-block {
+  background: var(--color-bg-alt);
+  border-radius: var(--r-card);
+  padding: var(--sp-3) var(--sp-4);
+}
+.consid-block .label {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-block-end: var(--sp-2);
+}
+.consid-block ul, .consid-block ol {
+  margin: 0;
+  padding-inline-start: var(--sp-4);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.consid-block li { margin-block: 4px; }
+.consid-block code {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background: rgba(30, 58, 138, 0.07);
+  padding: 1px 4px;
+  border-radius: 3px;
   color: var(--color-primary);
 }
-.fmf-card .ratings {
+.disposition-grid {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: var(--sp-2);
-  font-size: var(--font-caption);
+  gap: var(--sp-3);
+  grid-template-columns: 1fr;
 }
-.fmf-card .stars { color: var(--color-accent); font-family: var(--font-mono); }
-.fmf-card .stars.dim { color: var(--color-fg-muted); }
+@media (min-width: 480px) {
+  .disposition-grid { grid-template-columns: 1fr 1fr; }
+}
+.disp-card {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--r-card);
+  padding: var(--sp-3);
+  font-size: 0.8125rem;
+  line-height: 1.4;
+}
+.disp-card.recommended {
+  border-color: var(--color-accent);
+  background: rgba(202, 138, 4, 0.05);
+}
+.disp-card .disp-letter {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  border-radius: var(--r-pill);
+  background: var(--color-primary);
+  color: var(--rt-white);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 22px;
+  margin-inline-end: 6px;
+}
+.disp-card.recommended .disp-letter { background: var(--color-accent); }
+.disp-card .disp-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  margin: 0 0 4px 0;
+}
+.disp-card p {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--color-fg-muted);
+}
 
 /* -----------------------------------------------------------------------------
    12. Print / PDF export — Reveal `?print-pdf` mode

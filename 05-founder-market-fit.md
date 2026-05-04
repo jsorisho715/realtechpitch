@@ -30,6 +30,8 @@ Bolded cells are **unfair advantages** that show up in no other portfolio compan
 
 Look at the **Channel Partner Portal** row. It's the only row where four founders score ★★★ simultaneously — and three of those four are **current SmartRent leadership**. That's a once-in-a-decade founder-market-fit pattern.
 
+> ⚠ **The same fact that makes Channel Partner Portal a killer fit also makes it a SmartRent §1.6 / §3.5 conflict-of-interest issue under the Oct 2025 SmartRent Employee Handbook.** Read [`legal/SmartRent-considerations.md`](legal/SmartRent-considerations.md) before voting on Path A. Four disposition options are documented there (Drop / Defer / Get Legal-Dept approval / Re-scope). The recommended starting move is to seek written authorization from SmartRent's Compliance Officer per §3.5's explicit carve-out.
+
 For comparison, **Rehabit** has Tim's ★★★ but Jonathan/Halim are only ★★ and the rest are ★. Strong individual fit, weaker team coverage.
 
 **The visual treatment in the deck:**
