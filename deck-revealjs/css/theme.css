@@ -330,35 +330,62 @@
   }
 }
 
-/* Phone: Reveal's arrow controls render INSIDE the scaled deck wrapper,
-   so they shrink to ~5px on iPhone — invisible. Pull them out into the
-   real viewport at fixed position, full size. Same for the progress bar. */
+/* Phone: Reveal's arrow controls render INSIDE the scaled deck wrapper.
+   CSS position:fixed inside a transformed ancestor pins to that ancestor,
+   not the viewport — so any "fixed" overrides on .reveal .controls still
+   scale down. Hide Reveal's controls on phone; js/slide-effects.js mounts
+   a sibling mobile-nav OUTSIDE .reveal as the real, viewport-fixed nav. */
 @media (max-width: 767px) {
-  .reveal .controls {
-    position: fixed !important;
-    inset-block-end: max(48px, calc(env(safe-area-inset-bottom) + 40px)) !important;
-    inset-inline-end: 8px !important;
-    inset-inline-start: auto !important;
-    inset-block-start: auto !important;
-    transform: none !important;
-    bottom: max(48px, calc(env(safe-area-inset-bottom) + 40px)) !important;
-    right: 8px !important;
-    z-index: 100 !important;
-    display: block !important;
+  .reveal .controls { display: none !important; }
+}
+
+/* Mobile nav (mounted by js/slide-effects.js as a body child) */
+#rt-mobile-nav {
+  display: none;
+}
+@media (max-width: 767px) {
+  #rt-mobile-nav {
+    display: flex;
+    gap: 12px;
+    position: fixed;
+    bottom: max(20px, env(safe-area-inset-bottom));
+    right: max(16px, env(safe-area-inset-right));
+    z-index: 9990;
     pointer-events: none;
   }
-  .reveal .controls .controls-arrow {
-    width: 56px !important;
-    height: 56px !important;
+  #rt-mobile-nav button {
     pointer-events: auto;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(17, 24, 39, 0.12);
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: var(--color-primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(17, 24, 39, 0.18);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 120ms ease-out, opacity 120ms ease-out;
   }
-  .reveal .controls .controls-arrow::before,
-  .reveal .controls .controls-arrow::after {
-    width: 28px !important;
-    height: 5px !important;
+  #rt-mobile-nav button:active {
+    transform: scale(0.94);
   }
-  .reveal .progress {
-    height: 4px !important;
+  #rt-mobile-nav button:disabled {
+    opacity: 0.32;
+    pointer-events: none;
+  }
+}
+
+/* Dark-background slides: invert the mobile-nav for contrast */
+@media (max-width: 767px) {
+  #rt-mobile-nav.on-dark button {
+    background: rgba(17, 24, 39, 0.55);
+    color: var(--rt-white);
+    border-color: rgba(255, 255, 255, 0.18);
   }
 }
 

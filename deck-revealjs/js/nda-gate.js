@@ -41,7 +41,52 @@
     return indices.h === NDA_SLIDE_INDEX;
   }
 
+  // ---------------------------------------------------------------------------
+  // Mobile fix: Reveal applies `transform: scale()` to the deck wrapper. CSS
+  // `position: fixed` inside a transformed ancestor is positioned relative to
+  // THAT ancestor, not the viewport — so a "fixed" button inside the deck
+  // still scales down with the deck. Workaround: render a sibling button
+  // OUTSIDE the .reveal element and proxy its click to the in-deck button's
+  // handler. This sibling lives at viewport scale, fully tappable.
+  // ---------------------------------------------------------------------------
+  function mountMobileNdaButton(reveal) {
+    if (document.getElementById('rt-nda-mobile-cta')) return;
+
+    const btn = document.createElement('button');
+    btn.id = 'rt-nda-mobile-cta';
+    btn.type = 'button';
+    btn.textContent = 'I have signed \u2014 advance the deck';
+    btn.setAttribute('aria-label', 'Advance the deck after signing the NDA');
+    document.body.appendChild(btn);
+
+    function refreshVisibility() {
+      const onNda = isOnNdaSlide(reveal);
+      const released = isGateReleased();
+      btn.dataset.visible = (onNda && !released) ? 'true' : 'false';
+    }
+    refreshVisibility();
+
+    reveal.on('slidechanged', refreshVisibility);
+
+    btn.addEventListener('click', function () {
+      releaseGate();
+      btn.dataset.visible = 'false';
+      try { reveal.next(); } catch (_) {}
+      // Belt-and-suspenders fallback: if we somehow didn't advance, hash-jump.
+      setTimeout(function () {
+        if (reveal.getIndices().h === NDA_SLIDE_INDEX) {
+          window.location.hash = '#/3';
+        }
+      }, 200);
+    });
+  }
+
   function attachReveal(reveal) {
+    // Mobile-only: mount the viewport-positioned NDA CTA outside .reveal
+    if (window.matchMedia && window.matchMedia('(max-width: 767px)').matches) {
+      mountMobileNdaButton(reveal);
+    }
+
     // Trap navigation past the NDA slide until released
     const blockKey = function (event) {
       if (isGateReleased()) return;
@@ -80,15 +125,20 @@
     document.addEventListener('click', blockClick, true);
     document.addEventListener('touchstart', blockClick, true);
 
-    // Hook the CTA button
+    // Hook the CTA button — release immediately, then advance, then
+    // hash-jump as a safety net.
     const ctaBtn = document.querySelector('[data-nda-release]');
     if (ctaBtn) {
       ctaBtn.addEventListener('click', function () {
         releaseGate();
-        // Small delay so the user sees the state change before advancing
+        try { reveal.next(); } catch (_) {}
         setTimeout(function () {
-          reveal.next();
-        }, 350);
+          if (reveal.getIndices().h === NDA_SLIDE_INDEX) {
+            window.location.hash = '#/3';
+          }
+          const mob = document.getElementById('rt-nda-mobile-cta');
+          if (mob) mob.dataset.visible = 'false';
+        }, 200);
       });
     }
 
