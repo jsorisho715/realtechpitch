@@ -18,7 +18,7 @@ Master list of every URL the deck references. Phase 2 uses this to hyperlink eve
 | Johnathan Sorisho | https://www.linkedin.com/in/johnathan-sorisho-a2110052/ | Confirmed |
 | Halim Khaldi | https://www.linkedin.com/in/abdelhalim-khaldi | Confirmed |
 | Tim Elias | `[TODO — needs LinkedIn URL]` | Confirm during revision |
-| Justin Lesko | `[TODO — confirm slug]` | Profile gated; theorg.com confirms VP BD SmartRent |
+| Justin Lesko | `[TODO — confirm slug]` | Profile gated; theorg.com confirms VP BD the multifamily proptech employer |
 | Braeden Scheer | https://www.linkedin.com/in/braedenscheer | Confirmed |
 | Wil Gomez | https://www.linkedin.com/in/wilmanngomez | Confirmed |
 
@@ -107,10 +107,10 @@ Photos: drop in `assets/team/<name>.jpg` (1080px square, professional)
 
 ## 6. Team / Press / Industry References
 
-- SmartRent (parent of 4 founders' day-jobs, NYSE: SMRT): https://smartrent.com
-- SmartRent at CES 2025: https://smartrent.com/news/smartrent-at-ces-2025/
-- SmartRent IR: https://investors.smartrent.com
-- The Org (org chart for SmartRent confirming roles): https://theorg.com/org/smartrent
+- the multifamily proptech employer (parent of 4 founders' day-jobs, a publicly-traded multifamily proptech): #
+- publicly-traded multifamily proptech at CES 2025: #
+- current employer IR: #
+- The Org (org chart for a multifamily proptech employer confirming roles): #
 
 ## 7. Tech Stack & Tooling References (for credibility slides)
 
@@ -173,7 +173,7 @@ This table makes Phase 2 hyperlink-stamping mechanical.
 | 5 | Real Tech Consulting | https://realtechconsultant.com |
 | 6 | What We've Shipped | All 10 product URLs above |
 | 7 | Founding Team + Pool | All 6 LinkedIn URLs |
-| 8 | The SmartRent Spin-Out | https://smartrent.com + 4 LinkedIns |
+| 8 | The Multifamily-Lane Activation | # + 4 LinkedIns |
 | 9 | Portfolio Scorecard | — |
 | 10 | Brand Architecture | All product URLs |
 | 11 | Real Tech GTM | Apollo, Clay, HubSpot URLs + GTM admin URL |

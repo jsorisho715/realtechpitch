@@ -2,9 +2,9 @@
 
 Six bios in the deck's voice. **Framed as "history + what they bring"** since this is not yet a formed team — three are committed founders, three are in the founding executive pool.
 
-The headline insight (printed at the top of slide 7 in the deck): **"5 of 6 = current SmartRent leadership · 3 VPs + 2 Directors · 51+ combined years multifamily proptech + Director of Engineering."**
+The headline insight (printed at the top of slide 7 in the deck): **"5 of 6 = current multifamily proptech leadership · 3 VPs + 2 Directors · 51+ combined years multifamily proptech + Director of Engineering."**
 
-> **Update:** Halim Khaldi is also a Director at SmartRent (Engineering). The SmartRent count is now **five of six**, not four. This both strengthens the team narrative (more shared training-ground credibility, more inside-multifamily-proptech reps) and concentrates the SmartRent §1.6 / §3.5 risk exposure (one more founder bound by the handbook). See [`legal/SmartRent-considerations.md`](legal/SmartRent-considerations.md).
+> **Update:** Halim Khaldi is also a Director at a multifamily proptech company (Engineering). The the multifamily proptech employer count is now **five of six**, not four. This both strengthens the team narrative (more shared training-ground credibility, more inside-multifamily-proptech reps) and concentrates the §1.6 / §3.5 risk exposure (one more founder bound by the handbook). See [`legal/outside-employment-considerations.md`](legal/outside-employment-considerations.md).
 
 ---
 
@@ -12,7 +12,7 @@ The headline insight (printed at the top of slide 7 in the deck): **"5 of 6 = cu
 
 ### Johnathan Sorisho — Founder
 
-**Current role:** VP of Solutions at SmartRent (NYSE: SMRT) — recently promoted from Sr. Director Solutions Architecture.
+**Current role:** VP of Solutions at a publicly-traded multifamily proptech company — recently promoted from Sr. Director Solutions Architecture.
 
 **Multifamily proptech experience:** 20+ years.
 
@@ -22,11 +22,11 @@ The headline insight (printed at the top of slide 7 in the deck): **"5 of 6 = cu
 - Financial Systems Manager, Colony American Homes (2016)
 - Systems Business Analyst, Shelton-Cook Real Estate (2016–2018)
 - Implementation Consultant, Fenix Group Consulting (2017–2018)
-- Director of Client Success, SmartRent (2018–2019)
-- Director of Implementation, SmartRent (2018–2021)
-- Director of Solutions Architecture, SmartRent (2021–present)
-- Sr. Director Solutions Architecture, SmartRent (recent)
-- **VP of Solutions, SmartRent (current — just promoted)**
+- Director of Client Success (2018–2019)
+- Director of Implementation (2018–2021)
+- Director of Solutions Architecture (2021–present)
+- Sr. Director Solutions Architecture (recent)
+- **VP of Solutions (current — just promoted)**
 
 **Education:** Arizona State University
 
@@ -34,7 +34,7 @@ The headline insight (printed at the top of slide 7 in the deck): **"5 of 6 = cu
 
 **What he brings to Real Tech:**
 - 20-year multifamily proptech career covering operations, implementation, product, and solutions
-- Personally architects SmartRent customer deployments — understands how multifamily companies actually buy, deploy, and adopt tech
+- Personally architects multifamily customer deployments — understands how multifamily companies actually buy, deploy, and adopt tech
 - Built the entire Real Tech app portfolio (10 apps + GTM machine) in evenings and weekends — proof of execution
 - Founder of Kith (kith.com) — the product story is his own son's birth
 - Deep relationships across the multifamily operator community
@@ -45,7 +45,7 @@ The headline insight (printed at the top of slide 7 in the deck): **"5 of 6 = cu
 
 ### Halim Khaldi — Co-founder, Engineering
 
-**Current role:** Director of Engineering at SmartRent (NYSE: SMRT).
+**Current role:** Director of Engineering at a publicly-traded multifamily proptech company.
 
 **Role at Real Tech:** Co-founder, Full-Stack Engineering — the build engine.
 
@@ -58,9 +58,9 @@ The headline insight (printed at the top of slide 7 in the deck): **"5 of 6 = cu
 
 **LinkedIn:** [linkedin.com/in/abdelhalim-khaldi](https://www.linkedin.com/in/abdelhalim-khaldi)
 
-> **Note:** Halim's SmartRent Director of Engineering role means he is **bound by the same SmartRent handbook clauses (§1.6 / §1.10 / §3.5)** as Jonathan, Justin, Braeden, and Wil. See [`legal/SmartRent-considerations.md`](legal/SmartRent-considerations.md) — the previous "Halim + Tim can do concept research" carve-out narrows to **Tim only**.
+> **Note:** Halim's multifamily-proptech Director of Engineering role means he is **bound by the same current employer's handbook clauses (§1.6 / §1.10 / §3.5)** as Jonathan, Justin, Braeden, and Wil. See [`legal/outside-employment-considerations.md`](legal/outside-employment-considerations.md) — the previous "Halim + Tim can do concept research" carve-out narrows to **Tim only**.
 
-*Bio detail to fill during your revision pass: tenure at SmartRent, education, prior companies, signature projects.*
+*Bio detail to fill during your revision pass: tenure at a multifamily proptech company, education, prior companies, signature projects.*
 
 ---
 
@@ -82,22 +82,22 @@ The headline insight (printed at the top of slide 7 in the deck): **"5 of 6 = cu
 
 ## Founding Executive Pool (recruiting)
 
-The next three are the "Founding Executive Pool" — currently at SmartRent. Framed in the deck as "the team we're building," not "leaving SmartRent on date X." All conversations covered by the Mutual NDA in `[legal/](legal/)`.
+The next three are the "Founding Executive Pool" — currently at a multifamily proptech company. Framed in the deck as "the team we're building," not "leaving the current employer on date X." All conversations covered by the Mutual NDA in `[legal/](legal/)`.
 
 ### Justin Lesko — Founding Executive (BD / Channels)
 
-**Current role:** Vice President of Business Development at SmartRent.
+**Current role:** Vice President of Business Development at a multifamily proptech company.
 
-**Career arc at SmartRent:**
-- Director of Partnerships, SmartRent (2015–2020)
-- Vice President of Business Development, SmartRent (2020–present)
+**Career arc at the multifamily proptech employer:**
+- Director of Partnerships (2015–2020)
+- Vice President of Business Development (2020–present)
 
 **Prior founder experience:**
 - **Founded mrktstreet (2015)** — a marketplace for home service providers. *Same concept as our Channel Partner Portal slot, ten years earlier.*
 - Founded Statement Health (2010) — preventative health initiative
 
 **What he brings to Real Tech:**
-- BD relationships with 15 of top 20 multifamily operators (via SmartRent network — to be activated post-NDA, with respect for current employer)
+- BD relationships with 15 of top 20 multifamily operators (via multifamily operator network — to be activated post-NDA, with respect for current employer)
 - **Already founded the Channel Partner Portal concept** — learning curve already paid down
 - Investor experience (early-stage in EarlyBird, Sweater Inc.); member of [Supra](https://supra.io) network for product leaders
 - Event-industry partnership lane (photographers, florists, venues) for the Wedding Planner / Life Events Suite
@@ -108,15 +108,15 @@ The next three are the "Founding Executive Pool" — currently at SmartRent. Fra
 
 ### Braeden Scheer — Founding Executive (Product)
 
-**Current role:** Vice President of Product Management at SmartRent.
+**Current role:** Vice President of Product Management at a multifamily proptech company.
 
-**Career arc at SmartRent:**
+**Career arc at the multifamily proptech employer:**
 - Product Manager → Senior PM → Director of Product Management, Smart Communities → VP Product Management (March 2024–present)
 
 **Notable accomplishments:**
 - Scaled smart-home product offerings to **300,000+ multifamily units**
 - Launched products including Alloy Parking
-- Expanded SmartRent into Single Family Rentals and Student Housing verticals
+- Expanded the multifamily proptech employer into Single Family Rentals and Student Housing verticals
 - **Speaker at CES 2025** on smart technology in multifamily housing
 - Investor in EarlyBird, Sweater Inc.; member of Supra
 
@@ -133,9 +133,9 @@ The next three are the "Founding Executive Pool" — currently at SmartRent. Fra
 
 ### Wil Gomez (Wilmann Gómez) — Founding Executive (Product, Smart Communities)
 
-**Current role:** Director of Product, Smart Communities at SmartRent (March 2024–present).
+**Current role:** Director of Product, Smart Communities at a multifamily proptech company (March 2024–present).
 
-**Career arc at SmartRent:**
+**Career arc at the multifamily proptech employer:**
 - Senior Group Product Manager, Resident Experience (Oct 2021–Mar 2024)
 - Director of Product, Smart Communities (Mar 2024–present)
 
@@ -160,13 +160,13 @@ The next three are the "Founding Executive Pool" — currently at SmartRent. Fra
 
 Single sentence we'll print on slide 8 (Our Edge):
 
-> *"Three current SmartRent VPs, a product director, and an engineering director are launching the multifamily layer SmartRent doesn't ship — and ten other apps already shipped as proof of execution beyond the day job."*
+> *"Three current multifamily proptech VPs, a product director, and an engineering director are launching the multifamily layer the category doesn't ship — and ten other apps already shipped as proof of execution beyond the day job."*
 
 **Combined credentials surfaced on slide 7 (Team):**
-- 51+ years multifamily proptech experience (Jonathan 20+, Wil 13+, Justin ~10, Braeden ~8) + Halim's engineering tenure at SmartRent
+- 51+ years multifamily proptech experience (Jonathan 20+, Wil 13+, Justin ~10, Braeden ~8) + Halim's engineering tenure at the multifamily proptech employer
 - 850,000+ multifamily homes touched
 - 15 of top 20 multifamily operators reachable via warm intro
-- 1 publicly traded company (SmartRent NYSE: SMRT) as the shared training ground for **5 of 6** founders
+- 1 publicly traded company (a publicly-traded multifamily proptech company) as the shared training ground for **5 of 6** founders
 - 1 prior identical startup (Justin's mrktstreet) as Channel Partner Portal precedent
 - 10 shipped Real Tech apps as proof of velocity (Halim's engineering velocity is what makes this real)
 - 1 patent-pending technology (DealPayment Token / ELT escrow)
@@ -177,13 +177,13 @@ Single sentence we'll print on slide 8 (Our Edge):
 
 ## Sensitivity / Confidentiality Posture
 
-Because **5 of 6** are currently SmartRent leadership:
+Because **5 of 6** are currently multifamily proptech leadership:
 
 - The deck carries a **"Confidential — for internal cofounder discussion only"** footer on every slide
-- All 5 SmartRent founders are framed as **"Founding Team / Founding Executive Pool we're building"** — never as "leaving SmartRent on date X"
-- Real Tech is positioned as building the layer SmartRent **doesn't ship** (complementary, not competitive)
+- All 5 the multifamily proptech employer founders are framed as **"Founding Team / Founding Executive Pool we're building"** — never as "leaving the current employer on date X"
+- Real Tech is positioned as building the layer the multifamily proptech employer **doesn't ship** (complementary, not competitive)
 - The Mutual NDA in `[legal/](legal/)` includes an explicit **third-party IP protection clause** stating no party will share any current employer's confidential information
-- The full SmartRent §1.6 / §1.10 / §3.5 risk analysis lives in [`legal/SmartRent-considerations.md`](legal/SmartRent-considerations.md)
+- The full §1.6 / §1.10 / §3.5 risk analysis lives in [`legal/outside-employment-considerations.md`](legal/outside-employment-considerations.md)
 - Cofounders decide on the day how broadly to circulate this deck
 
 ---

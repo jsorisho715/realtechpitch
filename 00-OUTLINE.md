@@ -68,7 +68,7 @@ Total: **45 slides** (was 44 before NDA pause was added).
 
 | Why now | What it covers | How |
 |---------|----------------|-----|
-| 5 of 6 of us are current SmartRent leadership. This deck names partners, financials, IP, and recruiting plans. We protect each other before sharing any of it. | Mutual NDA. 3-year term. Mutual non-solicit (12 months). Third-party IP protection (no current-employer info shared). Arizona governing law. | Scan the QR. Sign the PDF (Adobe / DocuSign / HelloSign). When all 6 signatures collected, we resume. |
+| 5 of 6 of us are current multifamily proptech leadership. This deck names partners, financials, IP, and recruiting plans. We protect each other before sharing any of it. | Mutual NDA. 3-year term. Mutual non-solicit (12 months). Third-party IP protection (no current-employer info shared). Arizona governing law. | Scan the QR. Sign the PDF (Adobe / DocuSign / HelloSign). When all 6 signatures collected, we resume. |
 
 **CTA caption (Inter caps, +0.08em, navy):** *Pause here. Resume after all 6 signatures collected.*
 
@@ -161,14 +161,14 @@ Total: **45 slides** (was 44 before NDA pause was added).
 ### Slide 7 — Founding Team + Founding Executive Pool
 
 - **Layout:** `L9-TeamGrid` (6 cards, 3×2 desktop · 2×3 mobile)
-- **Entry animation:** `fadeUpStagger` per card with `--stagger-normal`; SmartRent badge on Jonathan / Halim / Justin / Braeden / Wil pulses gently in turquoise on enter
-- **Visual:** 6 photo cards. Each card carries: photo (1080px square from `assets/team/`) + name + role + SmartRent badge (where applicable) + LinkedIn icon link. Headline strip across the top of the slide reads:
+- **Entry animation:** `fadeUpStagger` per card with `--stagger-normal`; the multifamily proptech employer badge on Jonathan / Halim / Justin / Braeden / Wil pulses gently in turquoise on enter
+- **Visual:** 6 photo cards. Each card carries: photo (1080px square from `assets/team/`) + name + role + the multifamily proptech employer badge (where applicable) + LinkedIn icon link. Headline strip across the top of the slide reads:
 
 > **Founding Team (committed)** — Jonathan Sorisho, Halim Khaldi, Tim Elias
 >
 > **Founding Executive Pool (recruiting)** — Justin Lesko, Braeden Scheer, Wil Gomez
 
-**Footer callout (Inter caps, +0.08em, gold):** *5 of 6 = current SmartRent leadership · 3 VPs + 2 Directors · 51+ combined years multifamily proptech + Director of Engineering*
+**Footer callout (Inter caps, +0.08em, gold):** *5 of 6 = current multifamily proptech leadership · 3 VPs + 2 Directors · 51+ combined years multifamily proptech + Director of Engineering*
 
 **Links footer:** Each LinkedIn URL inline under the corresponding name card:
 - [Jonathan Sorisho](https://www.linkedin.com/in/johnathan-sorisho-a2110052/)
@@ -182,22 +182,22 @@ Source bios: [`04-team-bios.md`](04-team-bios.md)
 
 ---
 
-### Slide 8 — Our Edge: The SmartRent Spin-Out
+### Slide 8 — Our Edge: Six Builders, Multifamily-Deep
 
 - **Layout:** `L3-Statement` (massive single-sentence treatment) with stat strip below
 - **Entry animation:** `fadeUpStagger` on headline; `countUpReveal` on every stat
 - **Visual:** Background — premium gradient (navy → gold). Statement in white Fraunces, display-md. Below: a five-stat row in JetBrains Mono.
 
 **Headline:**
-> *"Three current SmartRent VPs, a product director, and an engineering director are launching the multifamily layer SmartRent doesn't ship — and ten other apps already shipped as proof of execution beyond the day job."*
+> *"Six builders. Multidisciplinary. Multifamily-deep. Eleven apps already shipped together — today we choose two to scale."*
 
 **Stat strip (5 columns, JetBrains Mono with CountUp animation):**
 
-| 51+ | 850K+ | 15 of 20 | 10 | 1 |
+| 51+ | 850K+ | 15 of 20 | 11 | 1 |
 |:---:|:---:|:---:|:---:|:---:|
-| years multifamily proptech | multifamily homes touched | top multifamily operators reachable via warm intro | shipped Real Tech apps | patent-pending technology |
+| years multifamily proptech | multifamily homes touched | top multifamily operators reachable via warm intro | shipped Real Tech artifacts | patent-pending technology |
 
-**Links footer:** [smartrent.com](https://smartrent.com) · [SmartRent at CES 2025](https://smartrent.com/news/smartrent-at-ces-2025/) · 4 LinkedIns from slide 7
+**Links footer:** [realtechconsultant.com](https://realtechconsultant.com) · 5 LinkedIns from slide 7
 
 Source: [`04-team-bios.md`](04-team-bios.md), [`05-founder-market-fit.md`](05-founder-market-fit.md)
 
@@ -333,19 +333,19 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 ### Slide 14 — #4 Channel Partner Portal (the founder-market-fit bet)
 
 - **Visual:** Wireframe SVG (concept stage — generated per [`screenshots/README.md`](screenshots/README.md)). Three-pane layout: operator dashboard · vendor marketplace · workflow timeline. Annotated with named multifamily operators that would convert via warm intro.
-- **Tagline:** *"The multifamily layer SmartRent doesn't ship — built by the team who knows exactly what's missing."*
-- **Problem / Target customer:** Multifamily property managers running parallel spreadsheets to coordinate vendors, work orders, and approvals across 100+ properties. SmartRent ships the smart-home; nobody ships the operator-vendor connective tissue.
+- **Tagline:** *"The multifamily layer the category doesn't ship — built by the team who knows exactly what's missing."*
+- **Problem / Target customer:** Multifamily property managers running parallel spreadsheets to coordinate vendors, work orders, and approvals across 100+ properties. incumbents ship the smart-home; nobody ships the operator-vendor connective tissue.
 - **Solution:** Operator-vendor portal: vendor onboarding, work order routing, SLA tracking, approval workflow, invoice reconciliation, performance scorecards.
 - **Market size:** Property management software $4B+/yr ([NMHC](https://www.nmhc.org)); operator-vendor portals a sub-segment growing 12% YoY.
-- **Top 3 competitors + our gap:** [ServiceChannel](https://servicechannel.com) (commercial-led, weak multifamily), [Building Engines](https://buildingengines.com) (commercial-led), [BuildingLink](https://buildinglink.com) (resident-experience, weak vendor side). Adjacent: [AppFolio](https://appfolio.com), [Yardi](https://yardi.com), [Procore](https://procore.com). Our gap: **multifamily-native + AI-augmented + built by 4 SmartRent veterans**.
-- **Moat:** Founder-market fit (5 of 6 founders are current SmartRent leadership — 3 VPs + 2 Directors; Justin literally founded mrktstreet — the same concept — in 2015). 850K+ multifamily homes touched. 15 of top 20 operators reachable via warm intro.
+- **Top 3 competitors + our gap:** [ServiceChannel](https://servicechannel.com) (commercial-led, weak multifamily), [Building Engines](https://buildingengines.com) (commercial-led), [BuildingLink](https://buildinglink.com) (resident-experience, weak vendor side). Adjacent: [AppFolio](https://appfolio.com), [Yardi](https://yardi.com), [Procore](https://procore.com). Our gap: **multifamily-native + AI-augmented + built by 4 the multifamily proptech employer veterans**.
+- **Moat:** Founder-market fit (5 of 6 founders are current multifamily proptech leadership — 3 VPs + 2 Directors; Justin literally founded mrktstreet — the same concept — in 2015). 850K+ multifamily homes touched. 15 of top 20 operators reachable via warm intro.
 - **Build status:** **1% (concept).** Paid down via Justin's 2015 mrktstreet learning curve.
-- **Path to first $10k MRR:** 5 enterprise pilots @ $2k/mo. Channel: warm intros via the SmartRent network (post-NDA, with respect for current employer).
-- **Channel Readiness:** **Strongest in portfolio.** SmartRent customer relationships + Braeden/Wil product credibility + Justin's BD experience. Named pilots will be added in revision pass.
+- **Path to first $10k MRR:** 5 enterprise pilots @ $2k/mo. Channel: warm intros via the multifamily operator network (post-NDA, with respect for current employer).
+- **Channel Readiness:** **Strongest in portfolio.** multifamily customer relationships + Braeden/Wil product credibility + Justin's BD experience. Named pilots will be added in revision pass.
 - **Founder lead:** Justin (BD) + Braeden (Product) + Wil (UX) + Jonathan (Solutions)
 - **Adoption likelihood:** **7.4 / 10** *(would be higher if build wasn't at 1%)*
 
-**Links footer:** [servicechannel.com](https://servicechannel.com) · [buildingengines.com](https://buildingengines.com) · [buildinglink.com](https://buildinglink.com) · [smartrent.com](https://smartrent.com) · 4 SmartRent founder LinkedIns from slide 7
+**Links footer:** [servicechannel.com](https://servicechannel.com) · [buildingengines.com](https://buildingengines.com) · [buildinglink.com](https://buildinglink.com) · 5 multifamily-proptech founder LinkedIns from slide 7
 
 ---
 
@@ -490,16 +490,16 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 
 ### Slide 22 — Founder-Market Fit Matrix (the deck's "wow" moment)
 
-- **Layout:** Custom variant of `L7-Scorecard` — matrix with team-photo column-headers and SmartRent badges
-- **Entry animation:** Matrix rows `fadeUpStagger`; SmartRent badges pulse in turquoise; `strokeDraw` on the four arrows from SmartRent founders → Channel Partner Portal column
+- **Layout:** Custom variant of `L7-Scorecard` — matrix with team-photo column-headers and the multifamily proptech employer badges
+- **Entry animation:** Matrix rows `fadeUpStagger`; the multifamily proptech employer badges pulse in turquoise; `strokeDraw` on the four arrows from the multifamily proptech employer founders → Channel Partner Portal column
 - **Visual:** Matrix with rows = team, columns = apps, cells = ★/★★/★★★. **Bolded cells** are unfair advantages. **Bolded apps** are where cumulative team strength is unmatched. Channel Partner Portal column is highlighted gold; arrows from Jonathan/Justin/Braeden/Wil converge on it.
 
 **Headline:** *Where each of us has unfair advantage.*
 
-**Footer callout (Inter caps, +0.08em, gold):** *5 of 6 founders/recruits = current SmartRent leadership · 3 VPs + 2 Directors · 51+ combined years multifamily proptech*
+**Footer callout (Inter caps, +0.08em, gold):** *5 of 6 founders/recruits = current multifamily proptech leadership · 3 VPs + 2 Directors · 51+ combined years multifamily proptech*
 
 **Killer-insight quote (centered below the matrix in Fraunces):**
-> *"The only column where four founders' ★★★ ratings stack is Channel Partner Portal. That column is also the only one with three current SmartRent leaders converging."*
+> *"The only column where four founders' ★★★ ratings stack is Channel Partner Portal. That column is also the only one with three current multifamily proptech leaders converging."*
 
 **Links footer:** All 6 LinkedIn URLs from slide 7 · Source: [`05-founder-market-fit.md`](05-founder-market-fit.md)
 
@@ -538,7 +538,7 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 2. **Voice** — Vapi-class infra makes vertical voice agents cheap
 3. **Local-first** — privacy backlash + on-device LLMs = edgenote-style category emerging
 4. **Automation** — every business wants n8n-class workflows but can't operate them solo
-5. **Multifamily proptech** — SmartRent NYSE listing validated the category; vendor layer still empty
+5. **Multifamily proptech** — the multifamily proptech employer NYSE listing validated the category; vendor layer still empty
 
 **Links footer:** [cbinsights.com](https://www.cbinsights.com) · [nmhc.org](https://www.nmhc.org) · [theknotworldwide.com](https://www.theknotworldwide.com/about) · [vapi.ai](https://vapi.ai)
 
@@ -556,9 +556,9 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 > *"For boutique consultancies and lean BD teams, Real Tech GTM is the agency-native CRM + outbound engine — already battle-tested running our own consulting outreach. Unlike Apollo's database or Clay's workflow chains, Real Tech GTM is one stack with eleven n8n workflows live, owned end-to-end."*
 
 **Right block — Path A finalist 2: Channel Partner Portal**
-> *"For multifamily property operators managing vendors at scale, Channel Partner Portal is the operator-vendor connective tissue SmartRent doesn't ship. Built by three current SmartRent VPs and a product director — 51 combined years of multifamily proptech, with 850K+ homes touched."*
+> *"For multifamily property operators managing vendors at scale, Channel Partner Portal is the operator-vendor connective tissue the category doesn't ship. Built by three current multifamily proptech VPs and a product director — 51 combined years of multifamily proptech, with 850K+ homes touched."*
 
-**Links footer:** [realtechconsultant.com/admin/gtm](https://realtechconsultant.com/admin/gtm) · [smartrent.com](https://smartrent.com)
+**Links footer:** [realtechconsultant.com/admin/gtm](https://realtechconsultant.com/admin/gtm)
 
 ---
 
@@ -590,10 +590,10 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 
 **Headline:** *Two paths. The team picks one.*
 
-**Path A — "SmartRent Spin-Out" (Recommended)**
+**Path A — "Multifamily-Lane Activation" (Recommended)**
 1. **Real Tech GTM** (8.7) — already built, eats own dog food
 2. **Channel Partner Portal** (7.4) — once-in-a-decade founder-market-fit bet
-- **Why:** Most defensible "why us / why now" answer. Activates the SmartRent lineup's unique advantages.
+- **Why:** Most defensible "why us / why now" answer. Activates the the multifamily proptech employer lineup's unique advantages.
 - **Gain:** Best founder-market fit; clearest brand story; durable competitive moat.
 - **Give up:** Slower to first revenue (Channel Partner Portal at 1% build).
 
@@ -706,7 +706,7 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 - **Entry animation:** `fadeUpStagger`; per-channel chip `imageBlurReveal`
 - **Visual:** Left column — 4-chip grid, one chip per founder owning that channel:
   - **Justin chip** — event industry (photographers · florists · venues)
-  - **Braeden chip** — multifamily via SmartRent network
+  - **Braeden chip** — multifamily via multifamily operator network
   - **Wil chip** — multifamily product community + Worcester Polytechnic alumni
   - **Tim chip** — LATAM + crypto + legal
 
@@ -943,7 +943,7 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 | Real Tech GTM | Apollo/Clay launch agency-native bundle | Medium | Speed: ship multi-tenant + agency-pricing first |
 | Rovian | Vapi/OpenAI ship vertical voice template | Medium-High | Vertical scripts + dealer-integration moat |
 | Wedding Planner | The Knot acquires a planner-CRM | Medium | Lock in B2B planner customers fast |
-| Channel Partner Portal | SmartRent ships an in-house version | Medium-High | Move before SmartRent prioritizes; 4-of-6 founders give us inside read |
+| Channel Partner Portal | the multifamily proptech employer ships an in-house version | Medium-High | Move before incumbents prioritize; 4-of-6 founders give us inside read |
 | Cannabis | Federal regulatory shift (positive or negative) | Medium | Operator-led growth; not capital-intensive |
 | DealPayment | SEC clarification on tokenized escrow | Medium | Off-ramp via partner; legal counsel via Tim |
 | Kith | Apple/Google "Family" suite native ship | Low-Medium | Privacy + multi-moment + grandma-grade UX wedge |
@@ -1029,7 +1029,7 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 - [x] All 45 (+ finale = 46) slides have **layout · entry animation · transition (where applicable) · visual · links footer · confidentiality footer**
 - [x] Per-app slides are ordered by adoption-likelihood from [`03-decision-framework.md`](03-decision-framework.md)
 - [x] Bundle Strategy (slide 21) reflects [`06-bundle-strategy.md`](06-bundle-strategy.md) numbers
-- [x] Founder-Market Fit (slide 22) reflects [`05-founder-market-fit.md`](05-founder-market-fit.md) matrix and SmartRent badge convergence
+- [x] Founder-Market Fit (slide 22) reflects [`05-founder-market-fit.md`](05-founder-market-fit.md) matrix and the multifamily proptech employer badge convergence
 - [x] NDA pause slide (#2) is hard-stop with QR + signable PDF link + disclaimer
 - [x] Recommendation slide (#27) presents both Path A (recommended) and Path B
 - [x] Finale frame-by-frame timing matches [`09-design-system.md`](09-design-system.md) §4

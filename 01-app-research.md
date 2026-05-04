@@ -194,9 +194,9 @@ One page per app. Sourced from live sites, codebases, and your channel-readiness
 
 ## 5. Channel Partner Portal
 
-**Tagline:** *The multifamily layer SmartRent doesn't ship. Owners create work orders. Vetted GCs bid. Ratings drive trust.*
+**Tagline:** *The multifamily layer the category doesn't ship. Owners create work orders. Vetted GCs bid. Ratings drive trust.*
 
-**Problem:** Multifamily property managers (and adjacent commercial real estate, HOAs, hospitality chains) need recurring vendor work — repairs, turnover, capex projects — but the existing solution is spreadsheets, phone calls, and a rolodex of "guys we like." No transparency, no rating system, no bid competition. SmartRent and Yardi don't ship a vendor marketplace; ServiceChannel and Building Engines target large enterprise only.
+**Problem:** Multifamily property managers (and adjacent commercial real estate, HOAs, hospitality chains) need recurring vendor work — repairs, turnover, capex projects — but the existing solution is spreadsheets, phone calls, and a rolodex of "guys we like." No transparency, no rating system, no bid competition. the multifamily proptech employer and Yardi don't ship a vendor marketplace; ServiceChannel and Building Engines target large enterprise only.
 
 **Target customer:** Multifamily property management companies with 1,000-50,000 units. Adjacent: HOAs, commercial property, hospitality chains.
 
@@ -211,23 +211,23 @@ One page per app. Sourced from live sites, codebases, and your channel-readiness
 - SAM: Multifamily portfolios above 1,000 units = ~600 companies = ~$300M tech spend
 - SOM (year 1): 20 multifamily customers × $2,500/mo + 10% take rate on $5M GMV = $1.1M ARR
 
-**Top 3 competitors:** [ServiceChannel](https://servicechannel.com) (enterprise, retail-focused), [Building Engines](https://buildingengines.com) (commercial RE), [BuildingLink](https://buildinglink.com) (resident-facing). Our gap: SMB-mid-market multifamily, two-sided marketplace with ratings, native to operator workflows the SmartRent team already understands.
+**Top 3 competitors:** [ServiceChannel](https://servicechannel.com) (enterprise, retail-focused), [Building Engines](https://buildingengines.com) (commercial RE), [BuildingLink](https://buildinglink.com) (resident-facing). Our gap: SMB-mid-market multifamily, two-sided marketplace with ratings, native to operator workflows the the multifamily proptech employer team already understands.
 
 **Moat:**
-- **SmartRent leadership team (5 of 6 founders/recruits — 3 VPs + 2 Directors)** — direct warm-intro access to 15 of top 20 multifamily operators
+- **multifamily proptech leadership team (5 of 6 founders/recruits — 3 VPs + 2 Directors)** — direct warm-intro access to 15 of top 20 multifamily operators
 - **Justin Lesko founded mrktstreet (2015)**, a marketplace for home service providers — identical concept, learning curve already paid down
 - 51+ combined years multifamily proptech expertise: nobody else can show this on a slide
 - Network effect: once ratings/bid history accumulates, switching cost climbs
 
-**Channel Readiness:** **9/10** — the team's existing relationships at SmartRent's customer base = warm pipeline of 15 operators day-one (subject to NDA + non-poach considerations).
+**Channel Readiness:** **9/10** — the team's existing relationships at the multifamily proptech employer's customer base = warm pipeline of 15 operators day-one (subject to NDA + non-poach considerations).
 
 **Path to first $10k MRR:** 4 multifamily customers @ $2,500/mo = $10k. Sold via warm intro through founder network.
 
-**Founder lead:** **The whole SmartRent triumvirate.** Jonathan (solutions architecture), Justin (BD + prior identical startup), Braeden (product), Wil (smart-communities product depth). Halim engineers it.
+**Founder lead:** **The whole the multifamily proptech employer triumvirate.** Jonathan (solutions architecture), Justin (BD + prior identical startup), Braeden (product), Wil (smart-communities product depth). Halim engineers it.
 
 **Adoption likelihood:** **8/10 (hypothetical, score climbs to 10/10 if executed by this team)** — concept-stage, but founder-market fit may be the strongest in the portfolio. **The deck's "PayPal Mafia" slot.**
 
-**Risks:** Build timeline (12-18 months realistic); two-sided marketplace cold-start (need vendors *and* operators); SmartRent could ship this themselves once they hear about it (mitigated by speed + relationships).
+**Risks:** Build timeline (12-18 months realistic); two-sided marketplace cold-start (need vendors *and* operators); the multifamily proptech employer could ship this themselves once they hear about it (mitigated by speed + relationships).
 
 ---
 

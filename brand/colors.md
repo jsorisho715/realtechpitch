@@ -163,7 +163,9 @@ Used on:
 
 ## Visual Treatments
 
-### "SmartRent badge" (used on team slides)
+### "Multifamily badge" (used on team slides — visible label "Multifamily")
+
+CSS class name kept as `.smartrent-badge` for stable selectors; the visible badge text is "Multifamily".
 
 ```css
 .smartrent-badge {

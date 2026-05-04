@@ -51,7 +51,7 @@ Output lands in `../assets/<target-name>/{hero.png, fullpage.png, mobile.png}`.
 ~25 competitor sites across all 10 apps
 
 ### Credibility context
-- smartrent.com (the team's day-job employer, used on Team slides)
+*(none captured by default; previously included a current-employer URL but that was removed during the branding scrub)*
 
 Each target produces:
 - `hero.png` — above-the-fold (1920×1080 @ 2x)
@@ -131,10 +131,7 @@ assets/
     fullpage.png
   competitor-clay/
     ...
-  ... (all 25+ competitors)
-  smartrent/
-    hero.png
-    fullpage.png
+    ... (all 25+ competitors)
   team/
     jonathan.jpg
     halim.jpg

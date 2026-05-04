@@ -21,7 +21,7 @@ Total weight = 100.
 | **Build Completeness** | 15 | % of code/product already shipped | Built things ship; concepts slip |
 | **Market Readiness** | 10 | Product-market fit signal: paying users, demos converting, market timing | Hot category × ready buyer = momentum |
 | **GTM Clarity** | 12 | Do we know who buys, how to reach them, what they pay? | Clear ICP and channel = predictable growth |
-| **Channel Readiness** | 15 | Named warm partners or pipeline available TODAY | This is where context matters: SmartRent network, Cannabis partners, dealership pipeline |
+| **Channel Readiness** | 15 | Named warm partners or pipeline available TODAY | This is where context matters: multifamily operator network, Cannabis partners, dealership pipeline |
 | **Founder-Market Fit** | 18 | Does this team have unique advantages (network, expertise, prior success) | The single biggest predictor of startup success per first-principles VC analysis |
 | **Moat / Defensibility** | 10 | Patent, network effect, data, switching cost, brand | Determines whether we keep what we earn |
 | **Speed to First $10k MRR** | 10 | Months to first material revenue | Cash flow funds the studio model |
@@ -138,7 +138,7 @@ The point of these scenarios: **the top 3 candidates (GTM, Rovian, Channel Partn
 
 The two scenarios surfaced on the recommendation slide:
 
-- **"SmartRent Spin-Out path" (recommended):** Real Tech GTM + Channel Partner Portal
+- **"Multifamily-Lane Activation path" (recommended):** Real Tech GTM + Channel Partner Portal
 - **"Channel-Activation path":** Rovian + DealPayment
 
 Both score well under different reasonable weights. The team picks based on appetite (cash-flow vs. brand-build).

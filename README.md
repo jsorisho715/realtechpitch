@@ -1,6 +1,6 @@
 # RealTech Pitch Deck
 
-> Cinematic, executive-grade pitch deck for **Real Tech Consulting** — positioning the consulting firm, presenting the 10-app studio portfolio (plus the Life Events Suite bundle) as a buffet ranked by adoption likelihood, telling the *"SmartRent leadership spin-out"* team story, and driving a cofounder vote on the top two products to attack.
+> Cinematic, executive-grade pitch deck for **Real Tech Consulting** — positioning the consulting firm, presenting the 10-app studio portfolio (plus the Life Events Suite bundle) as a buffet ranked by adoption likelihood, telling the *"multifamily proptech leadership spin-out"* team story, and driving a cofounder vote on the top two products to attack.
 >
 > *Confidential — for internal cofounder discussion only.*
 
@@ -117,12 +117,12 @@ When all 6 cofounders have reviewed and signed the NDA, Phase 2A engineering kic
 
 ## Confidentiality posture
 
-Because **5 of 6 founders/recruits are current SmartRent leadership** (3 VPs + 2 Directors), the deck is treated as confidential to the cofounder group:
+Because **5 of 6 founders/recruits are current multifamily proptech leadership** (3 VPs + 2 Directors), the deck is treated as confidential to the cofounder group:
 
 - Every slide carries the footer: *"Real Tech LLC · Confidential · For internal cofounder discussion only"*
 - Slide 2 is a **hard-stop NDA pause** — the deck does not advance until everyone has signed
-- All SmartRent personnel are framed as *"Founding Team / Founding Executive Pool we're building"* — never as "leaving SmartRent on date X"
-- Real Tech is positioned as building the layer **SmartRent doesn't ship** (complementary, not competitive)
+- All the multifamily proptech employer personnel are framed as *"Founding Team / Founding Executive Pool we're building"* — never as "leaving the current employer on date X"
+- Real Tech is positioned as building the layer **the category doesn't ship** (complementary, not competitive)
 - The Mutual NDA includes an explicit **third-party IP protection clause** — no party will share any current employer's confidential information
 - Cofounders decide on the day how broadly to circulate the deck after Phase 2A ships
 

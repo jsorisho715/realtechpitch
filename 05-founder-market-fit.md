@@ -1,6 +1,6 @@
 # 05 — Founder-Market Fit Matrix
 
-The deck's "wow" moment lives here. Slide 22 visualizes this matrix with SmartRent badges and converging arrows.
+The deck's "wow" moment lives here. Slide 22 visualizes this matrix with the multifamily proptech employer badges and converging arrows.
 
 ---
 
@@ -28,16 +28,16 @@ Bolded cells are **unfair advantages** that show up in no other portfolio compan
 
 ## Why This Slide Lands
 
-Look at the **Channel Partner Portal** row. It's the only row where four founders score ★★★ simultaneously — and three of those four are **current SmartRent leadership**. That's a once-in-a-decade founder-market-fit pattern.
+Look at the **Channel Partner Portal** row. It's the only row where four founders score ★★★ simultaneously — and three of those four are **current multifamily proptech leadership**. That's a once-in-a-decade founder-market-fit pattern.
 
-> ⚠ **The same fact that makes Channel Partner Portal a killer fit also makes it a SmartRent §1.6 / §3.5 conflict-of-interest issue under the Oct 2025 SmartRent Employee Handbook.** Read [`legal/SmartRent-considerations.md`](legal/SmartRent-considerations.md) before voting on Path A. Four disposition options are documented there (Drop / Defer / Get Legal-Dept approval / Re-scope). The recommended starting move is to seek written authorization from SmartRent's Compliance Officer per §3.5's explicit carve-out.
+> ⚠ **The same fact that makes Channel Partner Portal a killer fit also makes it a §1.6 / §3.5 conflict-of-interest issue under the Oct 2025 current employer's Employee Handbook.** Read [`legal/outside-employment-considerations.md`](legal/outside-employment-considerations.md) before voting on Path A. Four disposition options are documented there (Drop / Defer / Get Legal-Dept approval / Re-scope). The recommended starting move is to seek written authorization from the multifamily proptech employer's Compliance Officer per §3.5's explicit carve-out.
 
 For comparison, **Rehabit** has Tim's ★★★ but Jonathan/Halim are only ★★ and the rest are ★. Strong individual fit, weaker team coverage.
 
 **The visual treatment in the deck:**
-- 4 SmartRent badges (Jonathan/Justin/Braeden/Wil) cluster in the top of the matrix
-- Arrows from each SmartRent founder converge on the Channel Partner Portal column
-- Footer: *"5 of 6 founders/recruits = current SmartRent leadership · 3 VPs + 2 Directors · 51+ combined years multifamily proptech"*
+- 4 the multifamily proptech employer badges (Jonathan/Justin/Braeden/Wil) cluster in the top of the matrix
+- Arrows from each the multifamily proptech employer founder converge on the Channel Partner Portal column
+- Footer: *"5 of 6 founders/recruits = current multifamily proptech leadership · 3 VPs + 2 Directors · 51+ combined years multifamily proptech"*
 - A second visual cluster: Tim Elias's ★★★ on DealPayment and Rehabit (the legal/crypto/LATAM wedge)
 - A third: Justin's ★★★ on Wedding Planner AI and Life Events Suite (event-industry BD)
 
@@ -45,7 +45,7 @@ For comparison, **Rehabit** has Tim's ★★★ but Jonathan/Halim are only ★�
 
 ## Per-Founder Application Map
 
-### Jonathan Sorisho — *(VP Solutions, SmartRent · 20+ yrs multifamily)*
+### Jonathan Sorisho — *(VP Solutions · 20+ yrs multifamily)*
 
 **Primary apps (★★★):**
 - **Real Tech GTM** — he built it; eats own dog food running Real Tech consulting outbound
@@ -66,7 +66,7 @@ For comparison, **Rehabit** has Tim's ★★★ but Jonathan/Halim are only ★�
 
 ---
 
-### Halim Khaldi — *(Co-founder, Engineering · Director of Engineering, SmartRent)*
+### Halim Khaldi — *(Co-founder, Engineering · Director of Engineering)*
 
 **Primary apps (★★★):** **All apps requiring engineering** — that's literally every line in the matrix.
 
@@ -76,7 +76,7 @@ Halim's "fit" is structural. The studio model assumes a single engineering force
 
 > *"Halim is what makes the studio model work. Without one engineer who can move across all 10 apps with high taste and high velocity, this is just a deck of ideas. Halim turns ideas into shipped product."*
 
-**Where Halim's SmartRent role matters:** Halim is also a Director of Engineering at SmartRent (NYSE: SMRT) — making it **5 of 6 founders** at SmartRent, not 4. For the **10 apps in unrelated markets**, Halim's outside engineering work is permitted under SmartRent handbook §1.10 (same conditions as the others: no SmartRent time/equipment, no interference). For **Channel Partner Portal specifically**, Halim is now also bound — he can't write portal code or do portal product work until a disposition is settled. See [`legal/SmartRent-considerations.md`](legal/SmartRent-considerations.md).
+**Where Halim's multifamily-proptech role matters:** Halim is also a Director of Engineering at a publicly-traded multifamily proptech company — making it **5 of 6 founders** at a multifamily proptech company, not 4. For the **10 apps in unrelated markets**, Halim's outside engineering work is permitted under current employer's handbook §1.10 (same conditions as the others: no the multifamily proptech employer time/equipment, no interference). For **Channel Partner Portal specifically**, Halim is now also bound — he can't write portal code or do portal product work until a disposition is settled. See [`legal/outside-employment-considerations.md`](legal/outside-employment-considerations.md).
 
 ---
 
@@ -93,13 +93,13 @@ Halim's "fit" is structural. The studio model assumes a single engineering force
 
 ---
 
-### Justin Lesko — *(VP BD, SmartRent · ex-mrktstreet founder)*
+### Justin Lesko — *(VP BD · ex-mrktstreet founder)*
 
 **Primary apps (★★★):**
-- **Channel Partner Portal** — *literally founded mrktstreet, the same concept, in 2015*; current SmartRent BD relationships unlock multifamily channel
+- **Channel Partner Portal** — *literally founded mrktstreet, the same concept, in 2015*; current multifamily proptech BD relationships unlock multifamily channel
 - **Wedding Planner AI** — event-industry partnerships (photographers, florists, venues)
 - **Life Events Suite** — same partner channel as Wedding, with longer LTV
-- **Rovian.ai** — BD into service businesses he can introduce via SmartRent's ecosystem
+- **Rovian.ai** — BD into service businesses he can introduce via the multifamily operator network's ecosystem
 
 **Secondary (★★):**
 - **Real Tech GTM** — natural BD audience (B2B SaaS, agencies)
@@ -108,7 +108,7 @@ Halim's "fit" is structural. The studio model assumes a single engineering force
 
 ---
 
-### Braeden Scheer — *(VP Product, SmartRent · 300K+ units scaled)*
+### Braeden Scheer — *(VP Product · 300K+ units scaled)*
 
 **Primary apps (★★★):**
 - **Channel Partner Portal** — VP Product strategy across multifamily smart-home; product depth is exactly what the marketplace needs
@@ -122,7 +122,7 @@ Halim's "fit" is structural. The studio model assumes a single engineering force
 
 ---
 
-### Wil Gomez — *(Director Product Smart Communities, SmartRent · 850K+ homes)*
+### Wil Gomez — *(Director Product Smart Communities · 850K+ homes)*
 
 **Primary apps (★★★):**
 - **Channel Partner Portal** — direct product responsibility over 850K+ multifamily homes; UX of operator workflows
@@ -140,7 +140,7 @@ Halim's "fit" is structural. The studio model assumes a single engineering force
 
 ## The Killer Insight (in one sentence)
 
-> **The only seat in our portfolio where four founders' ★★★ ratings stack on the same column is Channel Partner Portal. That column is also the only one with three current SmartRent leaders converging.**
+> **The only seat in our portfolio where four founders' ★★★ ratings stack on the same column is Channel Partner Portal. That column is also the only one with three current multifamily proptech leaders converging.**
 
 That's the slide. That's the meeting. That's the deck's core argument.
 
@@ -152,7 +152,7 @@ If we believe Founder-Market Fit is the single biggest predictor of startup succ
 
 **The two recommendation paths from this matrix:**
 
-**Path A — "Activate the SmartRent lineup":**
+**Path A — "Activate the the multifamily proptech employer lineup":**
 - Real Tech GTM (Jonathan + Halim)
 - Channel Partner Portal (the four-star convergence)
 

@@ -34,7 +34,7 @@ const targets = [
     { name: 'buildingengines',  url: 'https://buildingengines.com',      kind: 'competitor' },
     { name: 'tinybeans',        url: 'https://tinybeans.com',            kind: 'competitor' },
     { name: 'otter',            url: 'https://otter.ai',                 kind: 'competitor' },
-    { name: 'smartrent',        url: 'https://smartrent.com',            kind: 'context' },
+    // Removed: SmartRent context capture (no longer used in deck per branding scrub)
   ] : []),
 ];
 

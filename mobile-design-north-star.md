@@ -10,7 +10,7 @@
 
 Read these for any UI work in this repo, in this order:
 
-1. **[`brand/colors.md`](brand/colors.md)** — palette, gradients, typography stack, type scale, weights, line-heights, iconography (Lucide @ 1.5px stroke), SmartRent badge, confidentiality footer, card surface, DO/DO NOT
+1. **[`brand/colors.md`](brand/colors.md)** — palette, gradients, typography stack, type scale, weights, line-heights, iconography (Lucide @ 1.5px stroke) badge, confidentiality footer, card surface, DO/DO NOT
 2. **[`09-design-system.md`](09-design-system.md)** — motion library (named easings + durations), per-slide entry animations (`fadeUpStagger`, `imageBlurReveal`, `countUpReveal`, `cardTilt3D`, `strokeDraw`, `gradientTextClip`, `noTransition`), 10 named section transitions, the 10s finale frame-by-frame, 11 layout templates (`L1-Cover` … `L11-NdaPause`), responsive breakpoints, performance budget, accessibility
 3. **[`07-brand-architecture.md`](07-brand-architecture.md)** — voice per brand, parent vs. product brand rules, naming conventions
 4. **[`00-OUTLINE.md`](00-OUTLINE.md)** — every slide declares its layout + entry animation + section transition + visual + links footer, all referencing the named primitives in (1)–(3)
@@ -68,7 +68,7 @@ If any UI suggestion contradicts (1)–(3), the suggestion loses. Always.
 
 ## 3. Audience and product context
 
-- **Audience:** 6 cofounders / founding executive pool — 5 are current SmartRent leadership (3 VPs + 2 Directors; the 2 Directors are Wil in Smart Communities and Halim in Engineering). High visual literacy. Reading on **laptop primary, phone secondary** (the deck is a presentation artifact, not a consumer app — but cofounders WILL skim on phone before / after meetings).
+- **Audience:** 6 cofounders / founding executive pool — 5 are current multifamily proptech leadership (3 VPs + 2 Directors; the 2 Directors are Wil in Smart Communities and Halim in Engineering). High visual literacy. Reading on **laptop primary, phone secondary** (the deck is a presentation artifact, not a consumer app — but cofounders WILL skim on phone before / after meetings).
 - **Distribution:** Vercel URL · PDF export via `?print-pdf` · `.pptx` fallback (Phase 2B). All three must work.
 - **Confidentiality:** every slide carries `Real Tech LLC · Confidential · For internal cofounder discussion only`. Slide 2 is a **hard-stop NDA pause** that must block deck advance until manually clicked through.
 

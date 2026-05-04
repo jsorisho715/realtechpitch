@@ -150,7 +150,7 @@ Adjacent: **AppFolio Property Manager** (PM software, has work orders but no mar
                   Single-Sided / List
 ```
 
-**Our opening:** "ServiceChannel for multifamily, with the SmartRent-built operator workflows and a vendor rating system that drives accountability."
+**Our opening:** "ServiceChannel for multifamily, with the the multifamily proptech employer-built operator workflows and a vendor rating system that drives accountability."
 
 ---
 
@@ -324,7 +324,7 @@ The bundle's competitor isn't a single app — it's the **status quo of using 3 
 
 2. **The strongest IP moats:**
    - Patent-pending DealPayment Token + ELT escrow process (DealPayment)
-   - SmartRent leadership network for warm-intro distribution (Channel Partner)
+   - multifamily proptech leadership network for warm-intro distribution (Channel Partner)
    - On-device AI architecture (edgenote)
    - Founder origin story (Kith)
 

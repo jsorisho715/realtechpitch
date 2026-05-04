@@ -130,7 +130,7 @@ Each product has its own voice that differs from the parent:
 | Rovian.ai | Bolder, service-biz friendly: deep blue + safety yellow accents |
 | Real Tech Wedding | Cream + gold + navy; editorial typography (Cormorant Garamond + Inter) |
 | DealPayment | Trust-and-finance: navy + black + a single warning red; legal-doc precision |
-| Channel Partner Portal | Multifamily-fluent: SmartRent-adjacent palette without copying it |
+| Channel Partner Portal | Multifamily-fluent: the multifamily proptech employer-adjacent palette without copying it |
 | HighTide | Cannabis-respectful: deep teal + warm orange + neutrals (avoid green-on-green clichés) |
 | edgenote.ai | Privacy-grade: neutral grays + single accent; minimal, calm |
 | Kith | Hospital-room warmth: cream + soft blush + handwritten accents |
@@ -146,7 +146,7 @@ A clean brand architecture matters most when **someone wants to buy a single pro
 | Scenario | What it looks like |
 |----------|---------------------|
 | **Vapi acquires Rovian.ai** | Clean — Rovian has its own brand and we keep Real Tech parent + remaining apps |
-| **A multifamily PMS company acquires Channel Partner Portal** | Clean — Portal is its own brand; SmartRent veterans stay on as the team or transition |
+| **A multifamily PMS company acquires Channel Partner Portal** | Clean — Portal is its own brand; the multifamily proptech employer veterans stay on as the team or transition |
 | **A wedding-tech rollup acquires Real Tech Wedding** | We lose the "Real Tech" prefix; product gets a new name post-acquisition |
 | **A privacy-first SaaS acquires edgenote.ai** | Clean — edgenote is its own brand |
 | **All of Real Tech is acquired** | Real Tech LLC is the parent acquired; product brands stay or fold under acquirer |

@@ -280,7 +280,7 @@ Full-width data table. Sticky top row (criteria), one row per app, color-coded s
 Centered Fraunces pull-quote (display-md), attribution beneath in Inter caps. Used for testimonials and the "this started one night in a hospital room" Kith story.
 
 ### `L9-TeamGrid`
-6 cards in a 3×2 grid (or 2×3 on mobile). Each card: photo + name + role + SmartRent badge (if applicable) + LinkedIn icon. Used on slide 7 and slide 42.
+6 cards in a 3×2 grid (or 2×3 on mobile). Each card: photo + name + role + Multifamily badge (if applicable) + LinkedIn icon. Used on slide 7 and slide 42.
 
 ### `L10-Finale`
 Black background, full-bleed. Reserved exclusively for slide 45.
