@@ -1,0 +1,158 @@
+/* =============================================================================
+   Real Tech Pitch Deck — Section transitions
+   Mirrors 09-design-system.md §3. Reveal.js calls these via section data attrs.
+   On phones (touch + small viewport), heavy transitions degrade to a fade.
+   ============================================================================= */
+
+/* Reveal's data-transition attribute drives these. We use the standard
+   transitions plus custom CSS overrides for the named ones in our system. */
+
+/* --- hardCut: Cover (1) → NDA (2) -------------------------------------- */
+.reveal .slides section[data-transition='hardCut'] {
+  transition: none !important;
+}
+
+/* --- releaseFade: NDA (2) → Section 1 ---------------------------------- */
+.reveal .slides section[data-transition='releaseFade'] {
+  transition: opacity var(--dur-large) var(--ease-out);
+}
+
+/* --- gradientWashLR: Section 1 → 2 ------------------------------------- */
+.reveal .slides section[data-transition='gradientWashLR']::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: var(--gradient-primary);
+  transform: translateX(-100%);
+  z-index: var(--z-overlay);
+  pointer-events: none;
+  animation: gradientWashLR var(--dur-cinematic) var(--ease-glide) forwards;
+}
+@keyframes gradientWashLR {
+  0%   { transform: translateX(-100%); }
+  50%  { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+
+/* --- dollyZoom: Section 2 → 3 ------------------------------------------ */
+@keyframes dollyZoomOut {
+  from { transform: scale(1); opacity: 1; }
+  to   { transform: scale(0.6); opacity: 0; }
+}
+.reveal .slides section.past[data-transition='dollyZoom'] {
+  animation: dollyZoomOut var(--dur-cinematic) var(--ease-glide);
+}
+
+/* --- cardFlip3D: Section 3 → 4 ----------------------------------------- */
+.reveal .slides section[data-transition='cardFlip3D'] {
+  transform-style: preserve-3d;
+  perspective: 1500px;
+}
+@keyframes cardFlipIn {
+  from { transform: rotateY(180deg); opacity: 0; }
+  to   { transform: rotateY(0); opacity: 1; }
+}
+.reveal .slides section.present[data-transition='cardFlip3D'] {
+  animation: cardFlipIn var(--dur-large) var(--ease-glide);
+}
+
+/* --- triadConverge: Section 4 → 4.5 ------------------------------------ */
+@keyframes triadConvergeIn {
+  from { transform: translateY(20px) scale(0.95); opacity: 0; }
+  to   { transform: none; opacity: 1; }
+}
+.reveal .slides section.present[data-transition='triadConverge'] {
+  animation: triadConvergeIn var(--dur-cinematic) var(--ease-glide);
+}
+
+/* --- splitScreenWipe: Section 4.5 → 5 ---------------------------------- */
+.reveal .slides section[data-transition='splitScreenWipe']::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg-alt);
+  z-index: var(--z-overlay);
+  pointer-events: none;
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  animation: splitScreenWipe var(--dur-large) var(--ease-glide) forwards;
+}
+@keyframes splitScreenWipe {
+  0%   { clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%); opacity: 1; }
+  50%  { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); opacity: 0.8; }
+  100% { clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%); opacity: 0; }
+}
+
+/* --- zoomBlurFocus: Section 5 → 6 -------------------------------------- */
+@keyframes zoomBlurFocus {
+  from { transform: scale(1.08); filter: blur(6px); opacity: 0; }
+  to   { transform: scale(1.0); filter: blur(0); opacity: 1; }
+}
+.reveal .slides section.present[data-transition='zoomBlurFocus'] {
+  animation: zoomBlurFocus var(--dur-cinematic) var(--ease-glide);
+}
+
+/* --- moneyRain: Section 6 → 7 (lightweight CSS layer; JS sprinkle in main.js) */
+.reveal .slides section[data-transition='moneyRain'] {
+  transition: opacity var(--dur-large) var(--ease-out);
+}
+
+/* --- timelineUnfurl: Section 7 → 8 ------------------------------------- */
+@keyframes timelineUnfurlIn {
+  from { transform: translateY(40px); opacity: 0; clip-path: inset(0 100% 0 0); }
+  to   { transform: none; opacity: 1; clip-path: inset(0 0 0 0); }
+}
+.reveal .slides section.present[data-transition='timelineUnfurl'] {
+  animation: timelineUnfurlIn var(--dur-cinematic) var(--ease-glide);
+}
+
+/* --- spotlightFocus: Section 8 → 9 ------------------------------------- */
+.reveal .slides section[data-transition='spotlightFocus']::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%,
+    transparent 0%,
+    transparent 30%,
+    rgba(0,0,0,0.65) 100%);
+  z-index: var(--z-overlay);
+  pointer-events: none;
+  opacity: 0;
+  animation: spotlightFocus var(--dur-cinematic) var(--ease-glide) forwards;
+}
+@keyframes spotlightFocus {
+  0%   { opacity: 0; }
+  60%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* --- fadeToBlack: Section 9 → 10 (Finale) ------------------------------ */
+.reveal .slides section[data-transition='fadeToBlack'] {
+  background: var(--rt-black);
+  transition: background var(--dur-large) var(--ease-out);
+}
+
+/* --- Phone fallback: degrade heavy transitions to a fade --------------- */
+@media (max-width: 767px) {
+  .reveal .slides section[data-transition='gradientWashLR']::before,
+  .reveal .slides section[data-transition='splitScreenWipe']::before,
+  .reveal .slides section[data-transition='spotlightFocus']::before {
+    display: none;
+  }
+  .reveal .slides section.present[data-transition='cardFlip3D'],
+  .reveal .slides section.present[data-transition='zoomBlurFocus'],
+  .reveal .slides section.present[data-transition='triadConverge'],
+  .reveal .slides section.present[data-transition='timelineUnfurl'],
+  .reveal .slides section.past[data-transition='dollyZoom'] {
+    animation: none;
+  }
+}
+
+/* --- Reduced motion: disable all custom transitions -------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal .slides section[data-transition]::before,
+  .reveal .slides section.present[data-transition],
+  .reveal .slides section.past[data-transition] {
+    animation: none !important;
+    transition: none !important;
+  }
+}

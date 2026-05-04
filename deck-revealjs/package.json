@@ -1,0 +1,21 @@
+{
+  "name": "realtech-pitch-deck",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Real Tech Consulting cofounder pitch deck — cinematic Reveal.js implementation, mobile-first, brand-locked from /brand and /09-design-system.md",
+  "scripts": {
+    "dev": "npx --yes http-server -p 3000 -c-1 --no-dotfiles ./",
+    "build": "echo No build step — static deploy from this folder.",
+    "deploy": "npx --yes vercel --prod"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "pitch-deck",
+    "reveal.js",
+    "real-tech",
+    "cofounder",
+    "vercel"
+  ]
+}

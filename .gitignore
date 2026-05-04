@@ -1,0 +1,33 @@
+# Editor / OS
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Python (for legal/build-nda.py)
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Generated / local-only
+legal/output/NDA-Real-Tech-Mutual.html
+.cache/
+.vercel/
+.next/
+dist/
+
+# Screenshots are gitignored until the team runs capture.ps1; the deck uses
+# branded placeholder cards in the meantime.
+assets/screenshots/
+assets/team/photos/

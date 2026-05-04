@@ -1,0 +1,124 @@
+/* =============================================================================
+   Real Tech Pitch Deck — Per-slide entry animations
+   Mirrors 09-design-system.md §2 verbatim. All gated by `prefers-reduced-motion`.
+   ============================================================================= */
+
+/* fadeUpStagger ---------------------------------------------------------- */
+
+@keyframes fadeUpStagger {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.reveal .slides section.present .fade-up-stagger > * {
+  opacity: 0;
+  animation: fadeUpStagger var(--dur-small) var(--ease-out) forwards;
+}
+
+.reveal .slides section.present .fade-up-stagger > *:nth-child(1) { animation-delay: 0ms;   }
+.reveal .slides section.present .fade-up-stagger > *:nth-child(2) { animation-delay: 80ms;  }
+.reveal .slides section.present .fade-up-stagger > *:nth-child(3) { animation-delay: 160ms; }
+.reveal .slides section.present .fade-up-stagger > *:nth-child(4) { animation-delay: 240ms; }
+.reveal .slides section.present .fade-up-stagger > *:nth-child(5) { animation-delay: 320ms; }
+.reveal .slides section.present .fade-up-stagger > *:nth-child(6) { animation-delay: 400ms; }
+.reveal .slides section.present .fade-up-stagger > *:nth-child(7) { animation-delay: 480ms; }
+.reveal .slides section.present .fade-up-stagger > *:nth-child(8) { animation-delay: 560ms; }
+.reveal .slides section.present .fade-up-stagger > *:nth-child(9) { animation-delay: 640ms; }
+
+/* Tighter cadence for grids / cards */
+.reveal .slides section.present .fade-up-tight > * {
+  opacity: 0;
+  animation: fadeUpStagger var(--dur-small) var(--ease-out) forwards;
+}
+.reveal .slides section.present .fade-up-tight > *:nth-child(1) { animation-delay: 0ms;  }
+.reveal .slides section.present .fade-up-tight > *:nth-child(2) { animation-delay: 60ms; }
+.reveal .slides section.present .fade-up-tight > *:nth-child(3) { animation-delay: 120ms;}
+.reveal .slides section.present .fade-up-tight > *:nth-child(4) { animation-delay: 180ms;}
+.reveal .slides section.present .fade-up-tight > *:nth-child(5) { animation-delay: 240ms;}
+.reveal .slides section.present .fade-up-tight > *:nth-child(6) { animation-delay: 300ms;}
+.reveal .slides section.present .fade-up-tight > *:nth-child(7) { animation-delay: 360ms;}
+.reveal .slides section.present .fade-up-tight > *:nth-child(8) { animation-delay: 420ms;}
+.reveal .slides section.present .fade-up-tight > *:nth-child(9) { animation-delay: 480ms;}
+.reveal .slides section.present .fade-up-tight > *:nth-child(10){ animation-delay: 540ms;}
+.reveal .slides section.present .fade-up-tight > *:nth-child(11){ animation-delay: 600ms;}
+.reveal .slides section.present .fade-up-tight > *:nth-child(12){ animation-delay: 660ms;}
+
+/* imageBlurReveal ------------------------------------------------------- */
+
+@keyframes imageBlurReveal {
+  from { transform: scale(1.05); filter: blur(8px); opacity: 0; }
+  to   { transform: scale(1.0);  filter: blur(0);   opacity: 1; }
+}
+.reveal .slides section.present .image-blur-reveal {
+  animation: imageBlurReveal var(--dur-medium) var(--ease-out) forwards;
+}
+
+/* cardTilt3D — desktop-only hover (per north star §10) ------------------ */
+
+@media (hover: hover) and (pointer: fine) {
+  .card-3d-tilt {
+    transition: transform var(--dur-small) var(--ease-snap);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+  }
+  .card-3d-tilt:hover {
+    transform: rotateX(4deg) rotateY(-4deg) translateZ(8px);
+  }
+}
+
+/* strokeDraw ------------------------------------------------------------ */
+
+@keyframes strokeDraw {
+  from { stroke-dashoffset: 100%; }
+  to   { stroke-dashoffset: 0; }
+}
+.reveal .slides section.present path.draw-on,
+.reveal .slides section.present line.draw-on {
+  stroke-dasharray: 100%;
+  stroke-dashoffset: 100%;
+  animation: strokeDraw 1000ms var(--ease-out) forwards;
+}
+
+/* gradientTextClip — finale "MILLIONAIRES" ----------------------------- */
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50%      { background-position: 100% 50%; }
+}
+.gradient-text {
+  background: var(--gradient-primary);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 4s var(--ease-glide) infinite;
+}
+
+/* shockwave (finale) --------------------------------------------------- */
+
+@keyframes shockwave {
+  0%   { transform: scale(0); opacity: 1; border-width: 8px; }
+  100% { transform: scale(8); opacity: 0; border-width: 1px; }
+}
+
+/* Reduced-motion fallback ---------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal .slides section.present .fade-up-stagger > *,
+  .reveal .slides section.present .fade-up-tight > * {
+    opacity: 1;
+    animation: none;
+  }
+  .reveal .slides section.present .image-blur-reveal {
+    animation: none;
+    filter: none;
+    transform: none;
+    opacity: 1;
+  }
+  .reveal .slides section.present path.draw-on,
+  .reveal .slides section.present line.draw-on {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  .gradient-text { animation: none; }
+}

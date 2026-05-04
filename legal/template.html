@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>{{ title }}</title>
+  <style>
+    /* === Real Tech brand tokens (mirror brand/colors.md) === */
+    :root {
+      --rt-deep-navy: #1e3a8a;
+      --rt-gold: #ca8a04;
+      --rt-warm-grey: #dbd1cd;
+      --rt-turquoise: #32bdcd;
+      --rt-salmon: #ed7e66;
+      --rt-coral: #f06666;
+      --rt-fg: #111827;
+      --rt-fg-muted: #6b7280;
+      --rt-border: rgba(17, 24, 39, 0.10);
+    }
+
+    /* === WeasyPrint page setup === */
+    @page {
+      size: Letter;
+      margin: 0.85in 0.85in 1.05in 0.85in;
+
+      @top-left {
+        content: "Mutual Non-Disclosure Agreement";
+        font-family: 'Inter', sans-serif;
+        font-size: 8.5pt;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--rt-deep-navy);
+      }
+
+      @top-right {
+        content: "Real Tech LLC · Confidential";
+        font-family: 'Inter', sans-serif;
+        font-size: 8.5pt;
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        color: var(--rt-fg-muted);
+      }
+
+      @bottom-left {
+        content: "Template — review by qualified counsel before execution.";
+        font-family: 'Inter', sans-serif;
+        font-size: 8pt;
+        color: var(--rt-fg-muted);
+      }
+
+      @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        font-family: 'Inter', sans-serif;
+        font-size: 8pt;
+        color: var(--rt-fg-muted);
+      }
+    }
+
+    @page :first {
+      margin-top: 0.6in;
+      @top-left { content: ""; }
+      @top-right { content: ""; }
+    }
+
+    /* === Typography === */
+    body {
+      font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.55;
+      color: var(--rt-fg);
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Fraunces', 'Georgia', serif;
+      font-weight: 600;
+      color: var(--rt-deep-navy);
+      letter-spacing: -0.01em;
+      page-break-after: avoid;
+    }
+
+    h1 {
+      font-size: 24pt;
+      margin: 0 0 0.25em 0;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-size: 14pt;
+      margin: 1.6em 0 0.4em 0;
+      padding-bottom: 0.3em;
+      border-bottom: 1px solid var(--rt-border);
+    }
+
+    h3 {
+      font-size: 11.5pt;
+      margin: 1.0em 0 0.2em 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--rt-deep-navy);
+    }
+
+    h4 {
+      font-size: 10.5pt;
+      margin: 0.8em 0 0.2em 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      color: var(--rt-fg);
+    }
+
+    p {
+      margin: 0 0 0.6em 0;
+    }
+
+    ol, ul {
+      margin: 0.4em 0 0.8em 1.4em;
+      padding: 0;
+    }
+
+    ol li, ul li { margin: 0.25em 0; }
+
+    strong { color: var(--rt-deep-navy); font-weight: 600; }
+
+    em { color: var(--rt-fg); font-style: italic; }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--rt-border);
+      margin: 1.5em 0;
+    }
+
+    code, pre {
+      font-family: 'JetBrains Mono', Consolas, monospace;
+      font-size: 9pt;
+      background: var(--rt-warm-grey);
+      padding: 1pt 4pt;
+      border-radius: 2pt;
+    }
+
+    blockquote {
+      margin: 1.0em 0;
+      padding: 0.6em 1em;
+      border-left: 3px solid var(--rt-gold);
+      background: rgba(202, 138, 4, 0.05);
+      color: var(--rt-fg);
+      font-size: 9.5pt;
+    }
+
+    blockquote strong { color: var(--rt-gold); }
+
+    /* === Brand header (first page) === */
+    .brand-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding-bottom: 0.6em;
+      margin-bottom: 1.4em;
+      border-bottom: 3px solid;
+      border-image: linear-gradient(
+        90deg,
+        var(--rt-deep-navy) 0%,
+        var(--rt-turquoise) 50%,
+        var(--rt-salmon) 100%
+      ) 1;
+    }
+
+    .brand-header .brand-mark {
+      font-family: 'Fraunces', serif;
+      font-size: 16pt;
+      font-weight: 600;
+      color: var(--rt-deep-navy);
+      letter-spacing: -0.01em;
+    }
+
+    .brand-header .brand-meta {
+      font-family: 'Inter', sans-serif;
+      font-size: 8.5pt;
+      text-align: right;
+      color: var(--rt-fg-muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .doc-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6em 1.6em;
+      font-family: 'Inter', sans-serif;
+      font-size: 8.5pt;
+      color: var(--rt-fg-muted);
+      margin: 0.4em 0 1.4em 0;
+      padding: 0.6em 0.8em;
+      background: var(--rt-warm-grey);
+      border-radius: 4pt;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .doc-meta b {
+      color: var(--rt-deep-navy);
+      font-weight: 600;
+    }
+
+    /* === Signature block treatment === */
+    h3 + p strong:first-child {
+      display: inline-block;
+      min-width: 4em;
+    }
+
+    /* === Tables (if any markdown tables sneak in) === */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0.6em 0 1.0em 0;
+      font-size: 9.5pt;
+    }
+    th, td {
+      border: 1px solid var(--rt-border);
+      padding: 6pt 8pt;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--rt-warm-grey);
+      font-weight: 600;
+      color: var(--rt-deep-navy);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 8.5pt;
+    }
+
+    /* === Page break controls === */
+    h2 { page-break-before: auto; page-break-after: avoid; }
+    h3, h4 { page-break-after: avoid; }
+    p, li { orphans: 3; widows: 3; }
+
+    /* === Screen-only mobile preview (HTML fallback path) ===
+       The @page rules above govern PDF rendering. When a cofounder or counsel
+       opens the HTML preview in a phone browser instead of the PDF, the rules
+       below take over so the document is readable end-to-end. Print output is
+       unaffected. */
+    @media screen {
+      html, body {
+        background: #f7f5f3;
+      }
+      body {
+        max-inline-size: 820px;
+        margin: 0 auto;
+        padding:
+          max(20px, env(safe-area-inset-top))
+          max(20px, env(safe-area-inset-right))
+          max(32px, env(safe-area-inset-bottom))
+          max(20px, env(safe-area-inset-left));
+        font-size: 16px;       /* never below 16 on phone (no iOS auto-zoom) */
+        line-height: 1.6;
+        background: var(--rt-white);
+        box-shadow: 0 12px 32px rgba(17, 24, 39, 0.08);
+        border-radius: 4px;
+      }
+
+      h1 { font-size: clamp(22pt, 5.5vw, 28pt); }
+      h2 { font-size: clamp(15pt, 3.5vw, 17pt); }
+      h3 { font-size: clamp(11pt, 2.6vw, 12pt); }
+
+      /* Tables that would overflow on phone get a horizontal scroll
+         affordance instead of breaking the page. */
+      table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      /* Brand header reflows on phone — meta drops below the wordmark. */
+      .brand-header {
+        flex-wrap: wrap;
+        row-gap: 0.4em;
+      }
+      .brand-header .brand-meta {
+        text-align: left;
+        font-size: 8pt;
+      }
+
+      /* doc-meta becomes readable as a wrap pile on small screens. */
+      .doc-meta {
+        flex-direction: column;
+        gap: 0.3em;
+        font-size: 9pt;
+      }
+
+      /* Signature lines (the underscored runs) wrap awkwardly on phone — give
+         them the chance to break visually rather than push the layout wide. */
+      p {
+        overflow-wrap: anywhere;
+      }
+    }
+
+    /* When the screen really is narrow, give body breathing room. */
+    @media screen and (max-width: 480px) {
+      body {
+        font-size: 15.5px;
+        line-height: 1.55;
+        padding-inline: max(16px, env(safe-area-inset-left));
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="brand-header">
+    <div class="brand-mark">Real Tech<span style="color: var(--rt-gold);">.</span></div>
+    <div class="brand-meta">
+      Mutual NDA · Draft v1<br />
+      Confidential — for cofounder review
+    </div>
+  </header>
+
+  <div class="doc-meta">
+    <span><b>Parties:</b> Real Tech LLC · Each Recipient</span>
+    <span><b>Governing Law:</b> Arizona</span>
+    <span><b>Venue:</b> Maricopa County, AZ</span>
+    <span><b>Term:</b> 3 years</span>
+    <span><b>Non-Solicit:</b> 12 months</span>
+  </div>
+
+  {{ body | safe }}
+
+</body>
+</html>

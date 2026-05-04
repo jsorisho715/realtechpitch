@@ -1,0 +1,60 @@
+/* =============================================================================
+   NDA gate — visual feedback when the gate is engaged.
+   ============================================================================= */
+
+body.nda-gate-active .reveal .controls .navigate-right,
+body.nda-gate-active .reveal .controls .navigate-down {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+body.nda-gate-active .reveal .progress {
+  opacity: 0.3;
+}
+
+.layout-nda-pause .stop-badge.flash {
+  animation: stopFlash 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes stopFlash {
+  0%, 100% { transform: scale(1); }
+  35%      { transform: scale(1.18); box-shadow: 0 0 0 8px rgba(240, 102, 102, 0.18); }
+  70%      { transform: scale(1.06); box-shadow: 0 0 0 4px rgba(240, 102, 102, 0.10); }
+}
+
+[data-nda-release] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-primary);
+  color: var(--rt-white);
+  font-family: var(--font-sans);
+  font-size: var(--font-caption);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: var(--sp-3) var(--sp-5);
+  min-height: 44px;
+  border: none;
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  transition: background var(--dur-micro) var(--ease-snap),
+              transform var(--dur-micro) var(--ease-snap);
+  margin-block-start: var(--sp-3);
+}
+[data-nda-release]:hover {
+  background: #16317a;
+  transform: translateY(-1px);
+}
+[data-nda-release]:disabled {
+  background: var(--color-success);
+  cursor: default;
+  transform: none;
+}
+[data-nda-release]:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .layout-nda-pause .stop-badge.flash { animation: none; }
+}
