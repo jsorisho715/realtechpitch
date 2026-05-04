@@ -33,7 +33,7 @@ body.nda-gate-active .reveal .progress {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   padding: var(--sp-3) var(--sp-5);
-  min-height: 44px;
+  min-height: 56px;
   border: none;
   border-radius: var(--r-pill);
   cursor: pointer;
@@ -57,4 +57,31 @@ body.nda-gate-active .reveal .progress {
 
 @media (prefers-reduced-motion: reduce) {
   .layout-nda-pause .stop-badge.flash { animation: none; }
+}
+
+/* ---------------------------------------------------------------------------
+   Phone: Reveal scales the deck way down (iPhone 14 = 0.27x), so the in-deck
+   button at min-height 56px renders ~15px tall — illegible and impossible
+   to tap. Lift the button OUT of the scaled deck wrapper and pin it to the
+   real viewport, full-width across the bottom. Hide it once the user has
+   navigated past the NDA slide.
+   ------------------------------------------------------------------------ */
+@media (max-width: 767px) {
+  body:not(.nda-released) .reveal .slides section[data-slide-id="nda-pause"].present [data-nda-release],
+  .reveal .slides section[data-slide-id="nda-pause"].present [data-nda-release] {
+    position: fixed !important;
+    bottom: max(72px, calc(env(safe-area-inset-bottom) + 56px)) !important;
+    left: 16px !important;
+    right: 16px !important;
+    margin: 0 !important;
+    min-height: 60px !important;
+    font-size: 14px !important;
+    z-index: 200 !important;
+    box-shadow: 0 6px 20px rgba(30, 58, 138, 0.35);
+  }
+  /* Once not on the NDA section, the button vanishes (no orphan fixed
+     button on subsequent slides). */
+  .reveal .slides section[data-slide-id="nda-pause"]:not(.present) [data-nda-release] {
+    display: none !important;
+  }
 }
