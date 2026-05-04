@@ -214,7 +214,7 @@ One page per app. Sourced from live sites, codebases, and your channel-readiness
 **Top 3 competitors:** [ServiceChannel](https://servicechannel.com) (enterprise, retail-focused), [Building Engines](https://buildingengines.com) (commercial RE), [BuildingLink](https://buildinglink.com) (resident-facing). Our gap: SMB-mid-market multifamily, two-sided marketplace with ratings, native to operator workflows the SmartRent team already understands.
 
 **Moat:**
-- **SmartRent leadership team (4 of 6 founders/recruits)** — direct warm-intro access to 15 of top 20 multifamily operators
+- **SmartRent leadership team (5 of 6 founders/recruits — 3 VPs + 2 Directors)** — direct warm-intro access to 15 of top 20 multifamily operators
 - **Justin Lesko founded mrktstreet (2015)**, a marketplace for home service providers — identical concept, learning curve already paid down
 - 51+ combined years multifamily proptech expertise: nobody else can show this on a slide
 - Network effect: once ratings/bid history accumulates, switching cost climbs

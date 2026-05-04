@@ -37,7 +37,7 @@ For comparison, **Rehabit** has Tim's ★★★ but Jonathan/Halim are only ★�
 **The visual treatment in the deck:**
 - 4 SmartRent badges (Jonathan/Justin/Braeden/Wil) cluster in the top of the matrix
 - Arrows from each SmartRent founder converge on the Channel Partner Portal column
-- Footer: *"4 of 6 founders/recruits = current SmartRent leadership · 51+ combined years multifamily proptech"*
+- Footer: *"5 of 6 founders/recruits = current SmartRent leadership · 3 VPs + 2 Directors · 51+ combined years multifamily proptech"*
 - A second visual cluster: Tim Elias's ★★★ on DealPayment and Rehabit (the legal/crypto/LATAM wedge)
 - A third: Justin's ★★★ on Wedding Planner AI and Life Events Suite (event-industry BD)
 
@@ -66,7 +66,7 @@ For comparison, **Rehabit** has Tim's ★★★ but Jonathan/Halim are only ★�
 
 ---
 
-### Halim Khaldi — *(Co-founder, Engineering)*
+### Halim Khaldi — *(Co-founder, Engineering · Director of Engineering, SmartRent)*
 
 **Primary apps (★★★):** **All apps requiring engineering** — that's literally every line in the matrix.
 
@@ -75,6 +75,8 @@ Halim's "fit" is structural. The studio model assumes a single engineering force
 **The deck framing for Halim:**
 
 > *"Halim is what makes the studio model work. Without one engineer who can move across all 10 apps with high taste and high velocity, this is just a deck of ideas. Halim turns ideas into shipped product."*
+
+**Where Halim's SmartRent role matters:** Halim is also a Director of Engineering at SmartRent (NYSE: SMRT) — making it **5 of 6 founders** at SmartRent, not 4. For the **10 apps in unrelated markets**, Halim's outside engineering work is permitted under SmartRent handbook §1.10 (same conditions as the others: no SmartRent time/equipment, no interference). For **Channel Partner Portal specifically**, Halim is now also bound — he can't write portal code or do portal product work until a disposition is settled. See [`legal/SmartRent-considerations.md`](legal/SmartRent-considerations.md).
 
 ---
 

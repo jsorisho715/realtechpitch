@@ -68,7 +68,7 @@ Total: **45 slides** (was 44 before NDA pause was added).
 
 | Why now | What it covers | How |
 |---------|----------------|-----|
-| 4 of 6 of us are current SmartRent leadership. This deck names partners, financials, IP, and recruiting plans. We protect each other before sharing any of it. | Mutual NDA. 3-year term. Mutual non-solicit (12 months). Third-party IP protection (no current-employer info shared). Arizona governing law. | Scan the QR. Sign the PDF (Adobe / DocuSign / HelloSign). When all 6 signatures collected, we resume. |
+| 5 of 6 of us are current SmartRent leadership. This deck names partners, financials, IP, and recruiting plans. We protect each other before sharing any of it. | Mutual NDA. 3-year term. Mutual non-solicit (12 months). Third-party IP protection (no current-employer info shared). Arizona governing law. | Scan the QR. Sign the PDF (Adobe / DocuSign / HelloSign). When all 6 signatures collected, we resume. |
 
 **CTA caption (Inter caps, +0.08em, navy):** *Pause here. Resume after all 6 signatures collected.*
 
@@ -161,14 +161,14 @@ Total: **45 slides** (was 44 before NDA pause was added).
 ### Slide 7 — Founding Team + Founding Executive Pool
 
 - **Layout:** `L9-TeamGrid` (6 cards, 3×2 desktop · 2×3 mobile)
-- **Entry animation:** `fadeUpStagger` per card with `--stagger-normal`; SmartRent badge on Jonathan/Justin/Braeden/Wil pulses gently in turquoise on enter
+- **Entry animation:** `fadeUpStagger` per card with `--stagger-normal`; SmartRent badge on Jonathan / Halim / Justin / Braeden / Wil pulses gently in turquoise on enter
 - **Visual:** 6 photo cards. Each card carries: photo (1080px square from `assets/team/`) + name + role + SmartRent badge (where applicable) + LinkedIn icon link. Headline strip across the top of the slide reads:
 
 > **Founding Team (committed)** — Jonathan Sorisho, Halim Khaldi, Tim Elias
 >
 > **Founding Executive Pool (recruiting)** — Justin Lesko, Braeden Scheer, Wil Gomez
 
-**Footer callout (Inter caps, +0.08em, gold):** *4 of 6 = current SmartRent leadership · 3 VPs + 1 Director · 51+ combined years multifamily proptech*
+**Footer callout (Inter caps, +0.08em, gold):** *5 of 6 = current SmartRent leadership · 3 VPs + 2 Directors · 51+ combined years multifamily proptech + Director of Engineering*
 
 **Links footer:** Each LinkedIn URL inline under the corresponding name card:
 - [Jonathan Sorisho](https://www.linkedin.com/in/johnathan-sorisho-a2110052/)
@@ -189,7 +189,7 @@ Source bios: [`04-team-bios.md`](04-team-bios.md)
 - **Visual:** Background — premium gradient (navy → gold). Statement in white Fraunces, display-md. Below: a five-stat row in JetBrains Mono.
 
 **Headline:**
-> *"Three current SmartRent VPs and a product director are launching the multifamily layer SmartRent doesn't ship — and ten other apps already shipped as proof of execution beyond the day job."*
+> *"Three current SmartRent VPs, a product director, and an engineering director are launching the multifamily layer SmartRent doesn't ship — and ten other apps already shipped as proof of execution beyond the day job."*
 
 **Stat strip (5 columns, JetBrains Mono with CountUp animation):**
 
@@ -338,7 +338,7 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 - **Solution:** Operator-vendor portal: vendor onboarding, work order routing, SLA tracking, approval workflow, invoice reconciliation, performance scorecards.
 - **Market size:** Property management software $4B+/yr ([NMHC](https://www.nmhc.org)); operator-vendor portals a sub-segment growing 12% YoY.
 - **Top 3 competitors + our gap:** [ServiceChannel](https://servicechannel.com) (commercial-led, weak multifamily), [Building Engines](https://buildingengines.com) (commercial-led), [BuildingLink](https://buildinglink.com) (resident-experience, weak vendor side). Adjacent: [AppFolio](https://appfolio.com), [Yardi](https://yardi.com), [Procore](https://procore.com). Our gap: **multifamily-native + AI-augmented + built by 4 SmartRent veterans**.
-- **Moat:** Founder-market fit (4 of 6 founders are current SmartRent leadership; Justin literally founded mrktstreet — the same concept — in 2015). 850K+ multifamily homes touched. 15 of top 20 operators reachable via warm intro.
+- **Moat:** Founder-market fit (5 of 6 founders are current SmartRent leadership — 3 VPs + 2 Directors; Justin literally founded mrktstreet — the same concept — in 2015). 850K+ multifamily homes touched. 15 of top 20 operators reachable via warm intro.
 - **Build status:** **1% (concept).** Paid down via Justin's 2015 mrktstreet learning curve.
 - **Path to first $10k MRR:** 5 enterprise pilots @ $2k/mo. Channel: warm intros via the SmartRent network (post-NDA, with respect for current employer).
 - **Channel Readiness:** **Strongest in portfolio.** SmartRent customer relationships + Braeden/Wil product credibility + Justin's BD experience. Named pilots will be added in revision pass.
@@ -496,7 +496,7 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 
 **Headline:** *Where each of us has unfair advantage.*
 
-**Footer callout (Inter caps, +0.08em, gold):** *4 of 6 founders/recruits = current SmartRent leadership · 51+ combined years multifamily proptech*
+**Footer callout (Inter caps, +0.08em, gold):** *5 of 6 founders/recruits = current SmartRent leadership · 3 VPs + 2 Directors · 51+ combined years multifamily proptech*
 
 **Killer-insight quote (centered below the matrix in Fraunces):**
 > *"The only column where four founders' ★★★ ratings stack is Channel Partner Portal. That column is also the only one with three current SmartRent leaders converging."*

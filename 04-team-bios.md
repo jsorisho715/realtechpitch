@@ -2,7 +2,9 @@
 
 Six bios in the deck's voice. **Framed as "history + what they bring"** since this is not yet a formed team — three are committed founders, three are in the founding executive pool.
 
-The headline insight (printed at the top of slide 7 in the deck): **"4 of 6 = current SmartRent leadership · 3 VPs + 1 Director · 51+ combined years multifamily proptech."**
+The headline insight (printed at the top of slide 7 in the deck): **"5 of 6 = current SmartRent leadership · 3 VPs + 2 Directors · 51+ combined years multifamily proptech + Director of Engineering."**
+
+> **Update:** Halim Khaldi is also a Director at SmartRent (Engineering). The SmartRent count is now **five of six**, not four. This both strengthens the team narrative (more shared training-ground credibility, more inside-multifamily-proptech reps) and concentrates the SmartRent §1.6 / §3.5 risk exposure (one more founder bound by the handbook). See [`legal/SmartRent-considerations.md`](legal/SmartRent-considerations.md).
 
 ---
 
@@ -43,9 +45,12 @@ The headline insight (printed at the top of slide 7 in the deck): **"4 of 6 = cu
 
 ### Halim Khaldi — Co-founder, Engineering
 
+**Current role:** Director of Engineering at SmartRent (NYSE: SMRT).
+
 **Role at Real Tech:** Co-founder, Full-Stack Engineering — the build engine.
 
 **What he brings:**
+- Engineering leadership at a publicly traded NYSE company in the multifamily proptech category — same training ground as Jonathan, Justin, Braeden, and Wil
 - Full-stack engineering across Next.js, NestJS, Supabase, PostgreSQL, blockchain (Base L2 / EVM)
 - Engineering capacity to ship and maintain 10 apps in parallel — the studio model fails without this seat filled
 - Brilliant systems mind: makes hard architectural calls quickly and lives in the code daily
@@ -53,7 +58,9 @@ The headline insight (printed at the top of slide 7 in the deck): **"4 of 6 = cu
 
 **LinkedIn:** [linkedin.com/in/abdelhalim-khaldi](https://www.linkedin.com/in/abdelhalim-khaldi)
 
-*Bio detail to fill during your revision pass: education, prior companies, signature projects.*
+> **Note:** Halim's SmartRent Director of Engineering role means he is **bound by the same SmartRent handbook clauses (§1.6 / §1.10 / §3.5)** as Jonathan, Justin, Braeden, and Wil. See [`legal/SmartRent-considerations.md`](legal/SmartRent-considerations.md) — the previous "Halim + Tim can do concept research" carve-out narrows to **Tim only**.
+
+*Bio detail to fill during your revision pass: tenure at SmartRent, education, prior companies, signature projects.*
 
 ---
 
@@ -153,15 +160,15 @@ The next three are the "Founding Executive Pool" — currently at SmartRent. Fra
 
 Single sentence we'll print on slide 8 (Our Edge):
 
-> *"Three current SmartRent VPs and a product director are launching the multifamily layer SmartRent doesn't ship — and ten other apps already shipped as proof of execution beyond the day job."*
+> *"Three current SmartRent VPs, a product director, and an engineering director are launching the multifamily layer SmartRent doesn't ship — and ten other apps already shipped as proof of execution beyond the day job."*
 
 **Combined credentials surfaced on slide 7 (Team):**
-- 51+ years multifamily proptech experience (Jonathan 20+, Wil 13+, Justin ~10, Braeden ~8)
+- 51+ years multifamily proptech experience (Jonathan 20+, Wil 13+, Justin ~10, Braeden ~8) + Halim's engineering tenure at SmartRent
 - 850,000+ multifamily homes touched
 - 15 of top 20 multifamily operators reachable via warm intro
-- 1 publicly traded company (SmartRent NYSE: SMRT) as the shared training ground
+- 1 publicly traded company (SmartRent NYSE: SMRT) as the shared training ground for **5 of 6** founders
 - 1 prior identical startup (Justin's mrktstreet) as Channel Partner Portal precedent
-- 10 shipped Real Tech apps as proof of velocity
+- 10 shipped Real Tech apps as proof of velocity (Halim's engineering velocity is what makes this real)
 - 1 patent-pending technology (DealPayment Token / ELT escrow)
 
 **This is investor-grade founder narrative. It is genuinely rare.**
@@ -170,12 +177,13 @@ Single sentence we'll print on slide 8 (Our Edge):
 
 ## Sensitivity / Confidentiality Posture
 
-Because 4 of 6 are currently SmartRent leadership:
+Because **5 of 6** are currently SmartRent leadership:
 
 - The deck carries a **"Confidential — for internal cofounder discussion only"** footer on every slide
-- All 4 SmartRent founders are framed as **"Founding Team / Founding Executive Pool we're building"** — never as "leaving SmartRent on date X"
+- All 5 SmartRent founders are framed as **"Founding Team / Founding Executive Pool we're building"** — never as "leaving SmartRent on date X"
 - Real Tech is positioned as building the layer SmartRent **doesn't ship** (complementary, not competitive)
 - The Mutual NDA in `[legal/](legal/)` includes an explicit **third-party IP protection clause** stating no party will share any current employer's confidential information
+- The full SmartRent §1.6 / §1.10 / §3.5 risk analysis lives in [`legal/SmartRent-considerations.md`](legal/SmartRent-considerations.md)
 - Cofounders decide on the day how broadly to circulate this deck
 
 ---

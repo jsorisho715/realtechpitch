@@ -68,7 +68,7 @@ If any UI suggestion contradicts (1)–(3), the suggestion loses. Always.
 
 ## 3. Audience and product context
 
-- **Audience:** 6 cofounders / founding executive pool — 4 are current SmartRent leadership (3 VPs + 1 Director). High visual literacy. Reading on **laptop primary, phone secondary** (the deck is a presentation artifact, not a consumer app — but cofounders WILL skim on phone before / after meetings).
+- **Audience:** 6 cofounders / founding executive pool — 5 are current SmartRent leadership (3 VPs + 2 Directors; the 2 Directors are Wil in Smart Communities and Halim in Engineering). High visual literacy. Reading on **laptop primary, phone secondary** (the deck is a presentation artifact, not a consumer app — but cofounders WILL skim on phone before / after meetings).
 - **Distribution:** Vercel URL · PDF export via `?print-pdf` · `.pptx` fallback (Phase 2B). All three must work.
 - **Confidentiality:** every slide carries `Real Tech LLC · Confidential · For internal cofounder discussion only`. Slide 2 is a **hard-stop NDA pause** that must block deck advance until manually clicked through.
 

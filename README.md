@@ -117,7 +117,7 @@ When all 6 cofounders have reviewed and signed the NDA, Phase 2A engineering kic
 
 ## Confidentiality posture
 
-Because **4 of 6 founders/recruits are current SmartRent leadership**, the deck is treated as confidential to the cofounder group:
+Because **5 of 6 founders/recruits are current SmartRent leadership** (3 VPs + 2 Directors), the deck is treated as confidential to the cofounder group:
 
 - Every slide carries the footer: *"Real Tech LLC · Confidential · For internal cofounder discussion only"*
 - Slide 2 is a **hard-stop NDA pause** — the deck does not advance until everyone has signed
