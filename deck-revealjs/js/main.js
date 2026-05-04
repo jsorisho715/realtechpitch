@@ -16,9 +16,9 @@
 
   // Reveal.js config — mobile-friendly defaults, custom transitions per slide
   const config = {
-    width: 1280,
-    height: 800,
-    margin: 0.04,             // small margin so content breathes on tablet
+    width: 1440,
+    height: 900,
+    margin: 0.03,             // tight margin; deck content carries its own breathing room
     minScale: 0.2,
     maxScale: 2.0,
 

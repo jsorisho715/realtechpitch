@@ -1,0 +1,14 @@
+{
+  "name": "realtech-screenshots",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright screenshot capture for the pitch deck. Run `node capture.mjs` to refresh.",
+  "type": "module",
+  "scripts": {
+    "capture": "node capture.mjs",
+    "capture:all": "node capture.mjs --all"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.49.0"
+  }
+}

@@ -216,45 +216,64 @@
 
 /* -----------------------------------------------------------------------------
    3. Slide container — Reveal.js sizes the parent <section> to its config
-      (1280×800 by default per main.js); we fill 100% and let tall content
-      scroll within the slide on small screens.
+      (1440×900 per main.js). Slides MUST fit in that canvas. Authoring rule:
+      no slide overflows; no slide scrolls. If content doesn't fit, tighten
+      typography or split into two slides. The only exception: scorecard
+      tables which scroll horizontally inside their own wrapper, never the
+      slide.
    -------------------------------------------------------------------------- */
 
-/* Allow scroll within tall slides — overrides Reveal's default overflow:hidden.
-   Without this, content past 800px (e.g. the team grid) gets clipped on
-   touch devices that can't fit the scaled deck. */
 .reveal .slides > section,
 .reveal .slides > section > section {
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  /* Smooth scrollbar that doesn't dominate visually */
-  scrollbar-width: thin;
-  scrollbar-color: rgba(30, 58, 138, 0.25) transparent;
-}
-.reveal .slides > section::-webkit-scrollbar { width: 6px; }
-.reveal .slides > section::-webkit-scrollbar-thumb {
-  background: rgba(30, 58, 138, 0.25);
-  border-radius: 3px;
+  overflow: hidden;       /* slides don't scroll — they fit */
 }
 
 .reveal .slide {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   min-height: 100%;
-  padding-block-start: max(var(--sp-5), env(safe-area-inset-top));
-  padding-block-end:   max(var(--sp-7), calc(env(safe-area-inset-bottom) + var(--sp-6)));
-  padding-inline:      var(--gutter-phone);
+  padding-block-start: var(--sp-5);
+  padding-block-end:   var(--sp-7);
+  padding-inline:      var(--gutter-desktop);
   position: relative;
   background: var(--color-bg);
   color: var(--color-fg);
+  box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
+/* Phone-only path: when Reveal scales the deck below 50% (very small viewport),
+   we let slides scroll vertically as a graceful degradation rather than
+   forcing tiny illegible content. Desktop and tablet always fit. */
+@media (max-width: 480px) {
+  .reveal .slides > section,
+  .reveal .slides > section > section {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .reveal .slide {
+    padding-inline: var(--gutter-phone);
+    padding-block-end: max(var(--sp-7), calc(env(safe-area-inset-bottom) + var(--sp-6)));
+  }
+}
+@media (min-width: 481px) and (max-width: 1023px) {
   .reveal .slide { padding-inline: var(--gutter-tablet); }
 }
-@media (min-width: 1024px) {
-  .reveal .slide { padding-inline: var(--gutter-desktop); }
+
+/* CSS Grid grow-bug fix: every grid item gets min-width:0 so children
+   never push their column wider than their fr allocation. Prevents the
+   "visual-placeholder bleeding into the next column" bug. */
+.reveal .slide [class*="-grid"] > *,
+.reveal .slide .grid > *,
+.reveal .slide .app-body > *,
+.reveal .slide .app-bottom > *,
+.reveal .slide .info-blocks > *,
+.reveal .slide .stat-strip > *,
+.reveal .slide .layout-comparison > *,
+.reveal .slide .layout-two-column > * {
+  min-width: 0;
+  min-height: 0;
 }
 
 /* -----------------------------------------------------------------------------
@@ -432,103 +451,198 @@
   .layout-two-column.visual-right .col-content { order: 1; }
 }
 
-/* L5 — AppSlide --------------------------------------------------------- */
+/* L5 — AppSlide ---------------------------------------------------------
+   Density target: fits 1440×900 canvas with no scroll.
+   Vertical zones (~720px usable after padding):
+     Header  ............ 56px
+     Tagline ............ 40px
+     Body (visual+text) . 460px   [visual capped at 480×300]
+     Bottom strip ....... 84px
+     Links footer ....... 44px
+                          ----
+                          684px
+*/
 .layout-app-slide {
   background: var(--color-bg);
   display: grid;
-  gap: var(--sp-4);
-  grid-template-rows: auto 1fr auto auto;
+  gap: var(--sp-3);
+  grid-template-rows: auto auto 1fr auto auto;
+  overflow: hidden;
 }
+
 .layout-app-slide .app-header {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: var(--sp-3);
-  padding-block-end: var(--sp-3);
-  border-block-end: 1px solid var(--color-border);
+  align-items: baseline;
+  column-gap: var(--sp-3);
+  row-gap: var(--sp-1);
 }
 .layout-app-slide .app-name {
   font-family: var(--font-display);
-  font-size: var(--font-display-sm);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
   color: var(--color-primary);
   margin: 0;
+  line-height: 1;
 }
-.layout-app-slide .app-rank {
-  font-family: var(--font-mono);
-  font-size: var(--font-h2);
-  color: var(--color-accent);
+.layout-app-slide .app-url {
   margin-inline-start: auto;
+  font-family: var(--font-sans);
+  font-size: var(--font-caption);
+  color: var(--color-fg-muted);
+  text-decoration: none;
+  white-space: nowrap;
 }
+.layout-app-slide .app-url:hover { color: var(--color-primary); text-decoration: underline; }
+
 .layout-app-slide .app-tagline {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: var(--font-h1);
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  font-weight: 400;
   color: var(--color-fg);
   margin: 0;
+  line-height: 1.25;
+  max-inline-size: 90ch;
 }
 
+/* Body: 2-col on tablet+, stack on phone. Stats live INSIDE the content
+   column as a horizontal row, not a separate column — keeps density low. */
 .layout-app-slide .app-body {
   display: grid;
-  gap: var(--sp-5);
+  gap: var(--sp-4);
   grid-template-columns: 1fr;
+  align-items: start;
+  min-height: 0;
 }
 @media (min-width: 768px) {
   .layout-app-slide .app-body {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1.25fr);
     gap: var(--sp-5);
   }
 }
-@media (min-width: 1024px) {
-  .layout-app-slide .app-body {
-    grid-template-columns: 1.05fr 1.4fr 0.95fr;
-  }
-}
 
-.layout-app-slide .stat-block {
-  background: var(--color-bg-alt);
+.layout-app-slide .visual {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  max-height: 360px;
+  overflow: hidden;
   border-radius: var(--r-card);
+  background: var(--color-bg-alt);
+  box-shadow: 0 6px 18px rgba(17, 24, 39, 0.08);
+}
+.layout-app-slide .visual img,
+.layout-app-slide .visual .visual-placeholder {
+  width: 100%;
+  height: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  border-radius: var(--r-card);
+}
+.layout-app-slide .visual .visual-placeholder {
+  aspect-ratio: 16 / 10;
+  max-height: 360px;
   padding: var(--sp-4);
 }
-.layout-app-slide .stat-block dt {
+
+.layout-app-slide .content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  min-width: 0;
+  font-size: clamp(0.875rem, 1.05vw, 1rem);
+  line-height: 1.45;
+}
+
+/* Inline stat row at top of content column */
+.layout-app-slide .stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--sp-3) var(--sp-4);
+  padding: var(--sp-2) var(--sp-3);
+  background: var(--color-bg-alt);
+  border-radius: var(--r-chip);
+  margin: 0;
+  font-size: var(--font-caption);
+}
+.layout-app-slide .stat-row dt {
   font-family: var(--font-sans);
   font-size: var(--font-micro);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--color-fg-muted);
-  margin-block-start: var(--sp-3);
-}
-.layout-app-slide .stat-block dt:first-child { margin-block-start: 0; }
-.layout-app-slide .stat-block dd {
-  font-family: var(--font-mono);
-  font-size: var(--font-h2);
-  color: var(--color-primary);
+  font-weight: 600;
   margin: 0;
 }
-.layout-app-slide .stat-block dd.score {
+.layout-app-slide .stat-row dd {
+  font-family: var(--font-mono);
+  color: var(--color-primary);
+  font-weight: 600;
+  margin: 0;
+  margin-inline-end: var(--sp-3);
+}
+.layout-app-slide .stat-row dd.score {
   color: var(--color-accent);
-  font-size: var(--font-display-sm);
-  letter-spacing: -0.02em;
+  font-size: 1.125rem;
+}
+.layout-app-slide .stat-row .pair {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--sp-1);
 }
 
+.layout-app-slide .content p,
+.layout-app-slide .content ul {
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+}
+.layout-app-slide .content ul {
+  padding-inline-start: var(--sp-4);
+}
+.layout-app-slide .content ul li { margin-block: var(--sp-1); }
+.layout-app-slide .content ul li strong {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* Bottom strip: compact 3-up grid */
 .layout-app-slide .app-bottom {
   display: grid;
-  gap: var(--sp-3);
+  gap: var(--sp-2) var(--sp-4);
   grid-template-columns: 1fr;
   font-size: var(--font-caption);
+  padding: var(--sp-3);
   background: rgba(30, 58, 138, 0.04);
   border-radius: var(--r-card);
-  padding: var(--sp-4);
+  line-height: 1.4;
 }
 @media (min-width: 768px) {
-  .layout-app-slide .app-bottom { grid-template-columns: 1fr 1fr 1fr; }
+  .layout-app-slide .app-bottom { grid-template-columns: 1.1fr 1fr 1.1fr; }
 }
 .layout-app-slide .app-bottom .bot-label {
   font-family: var(--font-sans);
-  font-size: var(--font-micro);
+  font-size: 0.6875rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--color-fg-muted);
-  margin-block-end: var(--sp-1);
+  margin-block-end: 2px;
+  font-weight: 600;
+}
+
+/* Phone: stack visual on top, content below; stats wrap; bottom strip wraps */
+@media (max-width: 767px) {
+  .layout-app-slide { gap: var(--sp-3); }
+  .layout-app-slide .visual { max-height: 220px; }
+  .layout-app-slide .visual img,
+  .layout-app-slide .visual .visual-placeholder { max-height: 220px; }
+  .layout-app-slide .content { font-size: 0.95rem; }
 }
 
 /* L6 — Comparison ------------------------------------------------------- */
@@ -638,13 +752,25 @@
   color: var(--color-fg-muted);
 }
 
-/* L9 — TeamGrid --------------------------------------------------------- */
+/* L9 — TeamGrid ---------------------------------------------------------
+   Default: 6 cards in 3-col × 2-row at desktop, compact horizontal layout.
+   .compact modifier: for 12+ card slides (shipped, brand gallery) — 4 or 6
+   columns, even tighter cards. */
+
 .layout-team-grid { background: var(--color-bg); }
-.layout-team-grid h1 { margin-block-end: var(--sp-5); }
+.layout-team-grid h1 {
+  margin-block-end: var(--sp-3);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+.layout-team-grid > .caption { margin-block-end: var(--sp-4); }
+
 .layout-team-grid .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--sp-4);
+  gap: var(--sp-3);
+  flex: 1;
+  min-height: 0;
+  align-content: start;
 }
 @media (min-width: 480px) {
   .layout-team-grid .grid { grid-template-columns: 1fr 1fr; }
@@ -652,16 +778,18 @@
 @media (min-width: 1024px) {
   .layout-team-grid .grid { grid-template-columns: repeat(3, 1fr); }
 }
+
 .layout-team-grid .person-card {
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--r-card);
-  padding: var(--sp-4);
+  padding: var(--sp-3);
   display: flex;
   flex-direction: column;
-  gap: var(--sp-2);
+  gap: 6px;
   transition: transform var(--dur-small) var(--ease-snap),
               box-shadow var(--dur-small) var(--ease-snap);
+  min-width: 0;
 }
 @media (hover: hover) and (pointer: fine) {
   .layout-team-grid .person-card:hover {
@@ -669,37 +797,95 @@
     box-shadow: 0 12px 32px rgba(30, 58, 138, 0.12);
   }
 }
+
+/* Photo = circular avatar (compact, scannable) */
 .layout-team-grid .person-card .photo {
-  aspect-ratio: 1 / 1;
-  width: 100%;
+  width: 56px;
+  height: 56px;
   background: var(--gradient-primary);
-  border-radius: var(--r-card);
+  border-radius: var(--r-pill);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--rt-white);
   font-family: var(--font-display);
-  font-size: var(--font-display-sm);
+  font-size: 1.125rem;
   font-weight: 600;
+  flex-shrink: 0;
 }
 .layout-team-grid .person-card .name {
   font-family: var(--font-display);
-  font-size: var(--font-h1);
+  font-size: 1.05rem;
   color: var(--color-primary);
   margin: 0;
   font-weight: 600;
+  line-height: 1.2;
 }
 .layout-team-grid .person-card .role {
   font-family: var(--font-sans);
-  font-size: var(--font-caption);
+  font-size: 0.8125rem;
   color: var(--color-fg-muted);
+  line-height: 1.35;
+  margin: 0;
+}
+.layout-team-grid .person-card .smartrent-badge {
+  align-self: flex-start;
+  font-size: 0.625rem;
+  padding: 2px 8px;
+}
+.layout-team-grid .person-card .links {
+  margin: 0;
+  margin-block-start: auto;
 }
 .layout-team-grid .person-card .links a {
   display: inline-flex;
-  min-height: 44px;
   align-items: center;
-  font-size: var(--font-caption);
-  padding: var(--sp-2) 0;
+  font-size: 0.75rem;
+  padding: 2px 0;
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.layout-team-grid .person-card .caption {
+  font-size: 0.75rem;
+  color: var(--color-fg-muted);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Compact variant — for the 12-card "shipped" + "brand gallery" slides */
+.layout-team-grid.compact .grid {
+  gap: var(--sp-2);
+}
+@media (min-width: 480px) {
+  .layout-team-grid.compact .grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 768px) {
+  .layout-team-grid.compact .grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 1280px) {
+  .layout-team-grid.compact .grid { grid-template-columns: repeat(6, 1fr); }
+}
+.layout-team-grid.compact .person-card {
+  padding: var(--sp-2);
+  gap: 4px;
+  align-items: center;
+  text-align: center;
+}
+.layout-team-grid.compact .person-card .photo {
+  width: 44px;
+  height: 44px;
+  font-size: 0.875rem;
+}
+.layout-team-grid.compact .person-card .name {
+  font-size: 0.875rem;
+  text-align: center;
+}
+.layout-team-grid.compact .person-card .role,
+.layout-team-grid.compact .person-card a {
+  font-size: 0.6875rem;
+  text-align: center;
+  line-height: 1.3;
 }
 
 .callout-strip {
@@ -948,6 +1134,7 @@
 
 .visual-placeholder {
   width: 100%;
+  max-width: 100%;
   aspect-ratio: 16 / 10;
   background: var(--gradient-primary);
   border-radius: var(--r-card);
@@ -957,9 +1144,10 @@
   justify-content: center;
   color: var(--rt-white);
   text-align: center;
-  padding: var(--sp-5);
+  padding: var(--sp-4);
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
 }
 .visual-placeholder.brand-rovian   { background: linear-gradient(135deg, #0b3a82 0%, #f1c40f 100%); }
 .visual-placeholder.brand-wedding  { background: linear-gradient(135deg, #f6f1eb 0%, #ca8a04 100%); color: var(--color-primary); }
@@ -975,25 +1163,29 @@
 
 .visual-placeholder .vp-name {
   font-family: var(--font-display);
-  font-size: var(--font-display-sm);
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
   font-weight: 600;
   margin: 0;
+  line-height: 1.05;
+  word-break: break-word;
 }
 .visual-placeholder .vp-tag {
   font-family: var(--font-sans);
-  font-size: var(--font-caption);
+  font-size: var(--font-micro);
   margin-block-start: var(--sp-2);
   opacity: 0.85;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  max-inline-size: 90%;
 }
 .visual-placeholder .vp-meta {
   position: absolute;
-  bottom: var(--sp-3);
+  bottom: var(--sp-2);
   inset-inline: var(--sp-3);
   font-family: var(--font-mono);
-  font-size: var(--font-micro);
-  opacity: 0.7;
+  font-size: 0.625rem;
+  opacity: 0.65;
+  letter-spacing: 0.04em;
 }
 
 /* -----------------------------------------------------------------------------
@@ -1003,28 +1195,38 @@
 .links-footer {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--sp-3);
-  margin-block-start: var(--sp-4);
+  gap: var(--sp-2);
+  margin-block-start: auto;
   padding-block-start: var(--sp-3);
   border-block-start: 1px solid var(--color-border);
 }
 .links-footer a {
   display: inline-flex;
   align-items: center;
-  min-height: 44px;
-  padding: var(--sp-2) var(--sp-3);
-  background: rgba(30, 58, 138, 0.04);
+  padding: 4px var(--sp-2);
+  background: rgba(30, 58, 138, 0.06);
   border-radius: var(--r-chip);
   font-family: var(--font-sans);
-  font-size: var(--font-caption);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
   color: var(--color-primary);
   text-decoration: none;
   transition: background var(--dur-micro) var(--ease-snap);
+  white-space: nowrap;
 }
-.links-footer a:hover { background: rgba(30, 58, 138, 0.10); }
+.links-footer a:hover { background: rgba(30, 58, 138, 0.14); }
 .links-footer a:focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+/* On phone, expand link tap area to the SOP-required 44×44 minimum */
+@media (max-width: 767px) {
+  .links-footer a {
+    min-height: 36px;
+    padding: var(--sp-2) var(--sp-3);
+    font-size: var(--font-caption);
+  }
 }
 
 /* -----------------------------------------------------------------------------
