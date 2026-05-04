@@ -26,6 +26,7 @@ legal/output/NDA-Real-Tech-Mutual.html
 .vercel/
 .next/
 dist/
+.git-commit-msg.tmp
 
 # Screenshots are gitignored until the team runs capture.ps1; the deck uses
 # branded placeholder cards in the meantime.
