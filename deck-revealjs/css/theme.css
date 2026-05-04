@@ -271,7 +271,11 @@
 .reveal .slide .info-blocks > *,
 .reveal .slide .stat-strip > *,
 .reveal .slide .layout-comparison > *,
-.reveal .slide .layout-two-column > * {
+.reveal .slide .layout-two-column > *,
+.reveal .slide .layout-considerations > *,
+.reveal .slide .considerations-body > *,
+.reveal .slide .fmf-grid > *,
+.reveal .slide .disposition-grid > * {
   min-width: 0;
   min-height: 0;
 }
@@ -419,6 +423,18 @@
   gap: var(--sp-5);
   justify-items: stretch;
   align-items: stretch;
+}
+/* Inline-styled hero images in two-column slides — scale down on phone so
+   they don't dominate the slide. */
+.layout-two-column .col-visual img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  .layout-two-column .col-visual img {
+    max-height: 240px !important;
+  }
 }
 @media (min-width: 768px) {
   .layout-two-column {
@@ -1222,8 +1238,11 @@
 
 /* On phone, expand link tap area to the SOP-required 44×44 minimum */
 @media (max-width: 767px) {
+  .links-footer {
+    gap: var(--sp-3);
+  }
   .links-footer a {
-    min-height: 36px;
+    min-height: 44px;
     padding: var(--sp-2) var(--sp-3);
     font-size: var(--font-caption);
   }
@@ -1414,7 +1433,7 @@
 .consid-block {
   background: var(--color-bg-alt);
   border-radius: var(--r-card);
-  padding: var(--sp-3) var(--sp-4);
+  padding: var(--sp-3);
 }
 .consid-block .label {
   font-family: var(--font-sans);
@@ -1428,10 +1447,10 @@
 .consid-block ul, .consid-block ol {
   margin: 0;
   padding-inline-start: var(--sp-4);
-  font-size: 0.875rem;
-  line-height: 1.5;
+  font-size: 0.8125rem;
+  line-height: 1.4;
 }
-.consid-block li { margin-block: 4px; }
+.consid-block li { margin-block: 3px; }
 .consid-block code {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -1452,9 +1471,9 @@
   background: var(--color-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--r-card);
-  padding: var(--sp-3);
-  font-size: 0.8125rem;
-  line-height: 1.4;
+  padding: var(--sp-2) var(--sp-3);
+  font-size: 0.75rem;
+  line-height: 1.35;
 }
 .disp-card.recommended {
   border-color: var(--color-accent);
