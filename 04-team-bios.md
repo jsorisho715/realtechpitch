@@ -156,6 +156,24 @@ The next three are the "Founding Executive Pool" — currently at a multifamily 
 
 ---
 
+### Jordyn Stubblefield — Founding Executive (Product Marketing, silent partner)
+
+**Note on the name:** Jordyn is Johnathan Sorisho's spouse and kept her maiden name "Stubblefield."
+
+**Prior role:** Product Marketing at Smartrent — a multifamily proptech company.
+
+**Role at Real Tech:** Founding Executive · Product Marketing — silent founding-pool partner.
+
+**What she brings to Real Tech:**
+- Hands-on multifamily-proptech product marketing reps from inside Smartrent
+- Positioning + messaging instincts that complement the engineering-heavy founding team
+- Co-lead on the Wedding Planner per-app slide (consumer + venue marketing); contributing voice on Strategy / Life Events Suite
+- Silent partner posture today; activates if and when Real Tech raises or scales the marketing function
+
+**LinkedIn:** *to be added during revision pass*
+
+---
+
 ## The "Why This Team" Synthesis (for the deck)
 
 Single sentence we'll print on slide 8 (Our Edge):

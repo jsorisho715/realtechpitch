@@ -26,9 +26,9 @@ One page per app. Sourced from live sites, codebases, and your channel-readiness
 
 **Target customer:** B2B agencies, consulting firms, and 10-50 person SaaS teams. Secondary: SMBs who'd otherwise hire a fractional CMO.
 
-**Solution:** Always-on outbound + content engine. One stack, runs itself: finds prospects, researches each one, writes outreach with AI, sends + follows up, triages replies, monitors engagement, publishes content. Replaces Apollo + Clay + HubSpot + a CMS + a video tool. Already running our own outbound — eat-your-own-dog-food.
+**Solution:** Workflow engine + content engine. One stack, runs itself: finds prospects, researches each one, writes outreach with AI, sends + follows up, triages replies, monitors engagement, publishes content. Replaces Apollo + Clay + HubSpot + a CMS + a video tool. Already running our own outbound — eat-your-own-dog-food.
 
-**What's already built — 11 always-on workflows that sell, in plain English:**
+**What's already built — 11 live workflows that sell, in plain English:**
 
 | # | Workflow | What it does (pitch language) |
 |---|----------|-------------------------------|

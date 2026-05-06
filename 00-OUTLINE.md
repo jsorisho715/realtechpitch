@@ -13,25 +13,31 @@ Ranking convention: per-app slides (#11–20) are ordered top→bottom by **adop
 
 ---
 
-## At-a-glance sections
+## At-a-glance sections (post-audit)
 
-| # | Section | Slides | Mood |
-|---|---------|--------|------|
-| 0 | Cover & NDA pause | 1–2 | Open / Stop |
-| 1 | Open & Why | 3–4 | Calm intent |
-| 2 | The Firm | 5–8 | Credentials |
-| 3 | The Portfolio (Buffet) | 9–10 | Wide view |
-| 4 | Per-App Slides (top → bottom) | 11–20 | Buffet detail |
-| 4.5 | Bundle Play | 21–22 | Strategic insight |
-| 5 | Competitive & Market Context | 23–25 | Outside-in proof |
-| 6 | The Recommendation | 26–29 | Decision |
-| 7 | Real Tech Consulting GTM | 30–34 | Cash today |
-| 8 | 90 / 180 / 365 Plan | 35–37 | Sequencing |
-| 9 | The Ask | 38–40 | Vote |
-| 10 | Appendix | 41–44 | Backup |
-| Finale | One Step Closer | 45 | Cinematic close |
+| # | Section | Mood |
+|---|---------|------|
+| 0 | Cover (origin story) & NDA pause | Open / Stop |
+| 1 | Why now + decisions today | Calm intent |
+| 2 | Real Tech (firm + shipped + team + edge) | Credentials |
+| 3 | Portfolio scoreboard teaser + brand architecture | Wide view |
+| 4 | Per-App Slides (top → bottom) | Buffet detail |
+| 4.5 | Strategy (bundle spotlight + FMF matrix) | Strategic insight |
+| 5 | Competitive map + risks + Why Now (3 pillars) + Positioning | Outside-in proof |
+| 6 | Recommendation (editable scorecard + top 2 + backburner) | Decision |
+| 7 | Real Tech Consulting GTM | Cash today |
+| 8 | 30-60-90 collective + Next Steps | Sequencing |
+| 9 | The Ask (roles · capital · vote) | Vote |
+| 10 | Appendix (P&L + Glossary) | Backup |
+| Finale | One Step Closer | Cinematic close |
 
-Total: **45 slides** (was 44 before NDA pause was added).
+Per-audit changes:
+- **Removed:** Section 1 divider, Section 3 (Portfolio) divider, Resource Allocation, the standalone 6-month and 12-month plan slides, Team Full Bios appendix, Brand Gallery appendix.
+- **Renamed:** Section 2 divider headline `The Firm.` → `Real Tech.`; Section 4.5 divider headline `Bundle Play.` → `Strategy.`
+- **Restructured:** Cover (origin-story treatment), Slide 8 (progress-bar buckets), Slide 9 (added Jordyn Stubblefield, dropped subtext), Slide 10 (`Together, we bring.`), Slide 12 (top-3 teaser), Slide 19 (per-app Life Events Suite demoted to anchor line), Slide 27 (FMF matrix bucketed with MF group), Slide 30 (real quadrant SVG), Slide 31 (3-pillar Why now), Slide 34 (editable scorecard with localStorage persistence + recommendation callout), Slide 41 (Johnathan added as 5th channel chip), Slide 45 (collective 30-60-90 + Next Steps).
+- **Moved:** Risks slide moved out of the appendix to immediately follow Slide 30 (Competition Map), with a card-based layout + colored likelihood pills.
+
+Approximate slide count: **~50** (down from 58 before the audit).
 
 ---
 
@@ -39,19 +45,27 @@ Total: **45 slides** (was 44 before NDA pause was added).
 
 ---
 
-### Slide 1 — Cover
+### Slide 1 — Cover (origin-story treatment)
 
-- **Layout:** `L1-Cover`
-- **Entry animation:** `fadeUpStagger` on title + subhead
+- **Layout:** `L1-Cover` with the `layout-cover-origin` modifier
+- **Entry animation:** `fadeUpStagger` on wordmark, quote, and subhead
 - **Section transition:** *(none — this is the first slide)*
-- **Visual:** Full-bleed primary gradient (navy → turquoise → salmon) per [`brand/colors.md`](brand/colors.md). Real Tech wordmark top-left in white. Subtle parallax on cursor move.
+- **Visual:** Full-bleed primary gradient (navy → turquoise → salmon). Oversized `Real Tech` wordmark with `Tech` set in the gold accent gradient. `LLC` superscript in Inter caps gold.
 
-**Headline:** *Real Tech*
-**Sub-headline:** *From Consultancy to Studio. Picking Our First Two Bets.*
-**Date / venue:** *Cofounder offsite · [date TBD]*
-**Speaker:** Jonathan Sorisho, Founder
+**Wordmark:** *Real Tech.* (with `Tech` in gold)
+
+**Origin quote (Fraunces italic, gold quote-mark, navy left rule):**
+> *"Real Estate Technology. Real Technology. Real Consultants. Tech Consultants. All of it just made sense — because of the world we come from."*  
+> — Johnathan Sorisho, Founder
+
+**Sub-headline (Inter caps, +0.14em):** *Consultancy + Studio. Eleven shipped. Today we pick the two.*
+
+**Meta:** *Cofounder offsite · Date TBD*
 
 **Links footer:** [realtechconsultant.com](https://realtechconsultant.com)
+
+`<title>` tag: *Real Tech — Where the name came from.*  
+`<meta description>`: *Real Estate Technology. Real Technology. Real Consultants. Tech Consultants. Real Tech LLC — cofounder pitch deck. Confidential.*
 
 ---
 
@@ -60,7 +74,7 @@ Total: **45 slides** (was 44 before NDA pause was added).
 - **Layout:** `L11-NdaPause`
 - **Entry animation:** `noTransition` (intentional stop — the lack of motion is the design)
 - **Section transition from prior slide:** `hardCut` (0ms — brand says "stop")
-- **Visual:** Full-bleed warm-grey `#dbd1cd`. Coral `#f06666` "STOP" badge top-right. Centered QR code linking to `legal/output/NDA-Real-Tech-Mutual.pdf`. **No autoplay advance — must be manually clicked through.**
+- **Visual:** Full-bleed warm-grey `#dbd1cd`. Centered headline + QR code linking to `legal/output/NDA-Real-Tech-Mutual.pdf`. **No autoplay advance — must be manually clicked through.** *(Per audit: corner STOP badge removed; the warm-grey background + headline + "I have signed" CTA carry the pause cue.)*
 
 **Headline (Fraunces, display-md, navy):** *Before we proceed.*
 
@@ -84,24 +98,41 @@ Total: **45 slides** (was 44 before NDA pause was added).
 
 ---
 
-### Slide 3 — Today's Purpose
+### Slide 3 — Why now / Where we're going (replaces the Section 1 divider)
 
-- **Layout:** `L3-Statement`
+- **Layout:** `L3-Statement` with `gradient-bg`
 - **Entry animation:** `fadeUpStagger`
-- **Visual:** Right side — clean three-line vertical list with Lucide icons (Target / Users / Calendar) in turquoise. Left side — single Fraunces statement.
+- **Visual:** Premium navy → gold gradient. Three-line `lead-list` with gold left rules.
 
-**Headline:** *Today's purpose.*
+**Headline:** *Why now. Where we're going.*
 
-**Three sub-points (right column):**
-1. **Decide top 2** — pick the two products we'll attack with focus
-2. **Align resources** — engineering, capital, and BD weight behind those two
-3. **Set the 90-day plan** — leave with named owners and milestones
+**Lead list:**
+1. **Why now —** AI cost collapsed, the multifamily proptech window is open, and the eleven we've shipped paid the tuition.
+2. **End goal —** a profitable studio with two real businesses inside it, funded by the consulting firm.
+3. **What we leave with —** two picks, an aligned team, and a calendar of the next 30-60-90 milestones.
 
 **Links footer:** *(none)*
 
 ---
 
-### Slide 4 — The Vision
+### Slide 4 — Today, we decide three things
+
+- **Layout:** `L3-Statement`
+- **Entry animation:** `fadeUpStagger`
+- **Visual:** Single Fraunces statement.
+
+**Headline:** *Today, we decide three things.*
+
+**Three sub-points:**
+1. **Top 2** — the two products we attack with focus
+2. **Resources** — engineering, capital, and BD behind those two
+3. **The calendar** — walk out with 30-60-90 day milestones we all agree to *(no named owners — owners assigned in a follow-up working session)*
+
+**Links footer:** *(none)*
+
+---
+
+### Slide 5 — The Vision
 
 - **Layout:** `L4-TwoColumn` (visual left, content right)
 - **Entry animation:** `fadeUpStagger` + `imageBlurReveal` on the visual
@@ -120,84 +151,113 @@ Total: **45 slides** (was 44 before NDA pause was added).
 
 ---
 
-## SECTION 2 — The Firm
+## SECTION 2 — Real Tech
 
 *Section transition from Section 1: `gradientWashLR` (navy → turquoise → salmon sweep L→R, `--dur-cinematic`)*
 
 ---
 
-### Slide 5 — Real Tech Consulting
+### Slide 6 — Section divider: Real Tech.
 
-- **Layout:** `L4-TwoColumn` (content left, visual right)
-- **Entry animation:** `fadeUpStagger` + `imageBlurReveal`
-- **Visual:** Right column — full-page screenshot of `realtechconsultant.com` services page captured by [`screenshots/capture.ps1`](screenshots/capture.ps1).
+- **Layout:** `L2-SectionDivider` with `divider-brand-mark` modifier
+- **Headline:** *Real Tech.* (with `Tech` in the gold gradient, matching the cover)
+- **Blurb:** *(none — divider is intentionally minimal)*
 
-**Headline:** *The Firm: what we do, who we serve, how we charge.*
+---
 
-**Three columns within content:**
+### Slide 7 — The firm we are today. The studio we become.
 
-| What we do | Who we serve | How we charge |
+- **Layout:** `L3-Statement` with three centered cards (no website screenshot)
+- **Entry animation:** `fadeUpStagger` + `--stagger-tight` on the cards
+- **Visual:** Three-column card row. Each card: Lucide icon header in turquoise, single-sentence body in Fraunces.
+
+**Headline:** *The firm we are today. The studio we become.*
+
+**Three cards:**
+
+| What we ship | Who buys | How we charge |
 |------------|--------------|---------------|
-| Modern web/app builds, AI integrations, GTM automation, fractional CTO/CPO, technical due diligence | Operators (multifamily, real estate, service businesses), founders ($1–10M ARR), and AI-curious legacy companies | Discovery → Build → Retainer → Equity-for-services (where appropriate) |
+| Web + app builds. AI integrations. Workflow engines. Fractional CTO / CPO. Technical due diligence. | Multifamily + real estate operators. Service businesses. $1–10M ARR founders. AI-curious legacy companies. | Free Discovery. $5k Diagnose Sprint. $25–80k Build. $5–15k/mo Retainer. Equity-for-services, selectively. |
 
 **Links footer:** [realtechconsultant.com](https://realtechconsultant.com) · [/services](https://realtechconsultant.com/services)
 
 ---
 
-### Slide 6 — What We've Shipped
+### Slide 8 — What We've Shipped (progress bars + buckets)
 
-- **Layout:** `L9-TeamGrid` (re-purposed as a 3×4 product grid)
-- **Entry animation:** `fadeUpStagger` with `--stagger-tight` (60ms apart for the 12 cards) + `cardTilt3D` on hover
-- **Visual:** 12-card grid. Each card: app logo + one-sentence tagline + Build %. Cards: Real Tech (parent), Real Tech GTM, Rovian, Wedding Planner AI, DealPayment, Kith, edgenote, HighTide, Baby Tracker, Channel Partner Portal (concept), Rehabit (concept), Always-on Outbound (11 workflows).
+- **Layout:** `L-Shipped` (`layout-shipped`) — two labeled buckets stacked vertically, each containing a `product-grid`
+- **Entry animation:** `fadeUpStagger` on the section, `--stagger-tight` on the cards
+- **Visual:** Each card: Lucide icon header, name, one-sentence tag, horizontal progress bar with turquoise → gold gradient fill, JetBrains Mono percentage. Kith carries a coral `renaming TBD` chip. The `Always-on Outbound` standalone card has been **removed** (its capability lives inside Real Tech GTM).
 
-**Headline:** *Eleven shipped artifacts. One studio.*
+**Headline:** *Eleven artifacts. Already shipped.*
 
-**Sub-caption (small, muted):** *All built in evenings and weekends, in parallel with day jobs. Proof that the studio model is real.*
+**Two buckets — In progress · Live / shipping:**
+
+| Product                | Bucket            | %   |
+| ---------------------- | ----------------- | --- |
+| Real Tech GTM          | In progress       | 70  |
+| Rovian.ai              | In progress       | 80  |
+| Wedding Planner        | In progress       | 80  |
+| DealPayment            | In progress       | 50  |
+| Channel Partner Portal | In progress       | 5   |
+| Cannabis HighTide      | In progress       | 40  |
+| Baby Tracker           | In progress       | 40  |
+| Rehabit                | In progress       | 5   |
+| Kith                   | Live              | 85 (renaming TBD) |
+| edgenote.ai            | Live              | 100 |
+| Real Tech (parent)     | Live (consulting) | —   |
 
 **Links footer:** [realtechconsultant.com](https://realtechconsultant.com) · [rovian.ai](https://rovian.ai) · [edgenote.ai](https://edgenote.ai) · [dealpayment.com](https://dealpayment.com) · [startakith.com](https://startakith.com)
 
 ---
 
-### Slide 7 — Founding Team + Founding Executive Pool
+### Slide 9 — The team
 
-- **Layout:** `L9-TeamGrid` (6 cards, 3×2 desktop · 2×3 mobile)
-- **Entry animation:** `fadeUpStagger` per card with `--stagger-normal`; the multifamily proptech employer badge on Jonathan / Halim / Justin / Braeden / Wil pulses gently in turquoise on enter
-- **Visual:** 6 photo cards. Each card carries: photo (1080px square from `assets/team/`) + name + role + the multifamily proptech employer badge (where applicable) + LinkedIn icon link. Headline strip across the top of the slide reads:
+- **Layout:** `L9-TeamGrid` (7 cards, 4×2 desktop · 2×4 mobile)
+- **Entry animation:** `fadeUpStagger` per card with `--stagger-normal`; Multifamily badge on Jonathan / Halim / Justin / Braeden / Wil / Jordyn pulses gently in turquoise on enter
+- **Visual:** 7 photo cards. Each card: photo placeholder, name, role, Multifamily badge (where applicable), LinkedIn icon link. *(Per audit: subtext caption removed; headline is just "The team.")*
 
-> **Founding Team (committed)** — Jonathan Sorisho, Halim Khaldi, Tim Elias
->
-> **Founding Executive Pool (recruiting)** — Justin Lesko, Braeden Scheer, Wil Gomez
+**Headline:** *The team.*
 
-**Footer callout (Inter caps, +0.08em, gold):** *5 of 6 = current multifamily proptech leadership · 3 VPs + 2 Directors · 51+ combined years multifamily proptech + Director of Engineering*
+**Cards (left to right, top to bottom):**
+- Johnathan Sorisho — Founder · VP Solutions in multifamily proptech
+- Halim Khaldi — Co-founder · Director of Engineering in multifamily proptech
+- Tim Elias — Co-founder · Crypto / Legal / LATAM
+- Justin Lesko — Founding Executive · VP BD in multifamily proptech
+- Braeden Scheer — Founding Executive · VP Product in multifamily proptech
+- Wil Gomez — Founding Executive · Director of Product, Smart Communities
+- **Jordyn Stubblefield** — Founding Executive · Product Marketing · ex-Smartrent — silent partner
 
-**Links footer:** Each LinkedIn URL inline under the corresponding name card:
+**Footer callout (Inter caps, +0.08em, gold):** *5 of 7 = current/former multifamily proptech leadership · 3 VPs + 2 Directors · 51+ combined years · 850K+ homes touched*
+
+**Links footer:** Each LinkedIn URL inline:
 - [Jonathan Sorisho](https://www.linkedin.com/in/johnathan-sorisho-a2110052/)
 - [Halim Khaldi](https://www.linkedin.com/in/abdelhalim-khaldi)
 - Tim Elias *(LinkedIn TBD)*
 - Justin Lesko *(LinkedIn slug TBD)*
 - [Braeden Scheer](https://www.linkedin.com/in/braedenscheer)
 - [Wil Gomez](https://www.linkedin.com/in/wilmanngomez)
+- Jordyn Stubblefield *(LinkedIn TBD)*
 
 Source bios: [`04-team-bios.md`](04-team-bios.md)
 
 ---
 
-### Slide 8 — Our Edge: Six Builders, Multifamily-Deep
+### Slide 10 — Together, we bring.
 
-- **Layout:** `L3-Statement` (massive single-sentence treatment) with stat strip below
+- **Layout:** `L3-Statement` with `gradient-bg`
 - **Entry animation:** `fadeUpStagger` on headline; `countUpReveal` on every stat
-- **Visual:** Background — premium gradient (navy → gold). Statement in white Fraunces, display-md. Below: a five-stat row in JetBrains Mono.
+- **Visual:** Premium navy → gold gradient. Headline in white Fraunces. Below: five-stat row in JetBrains Mono. *(Per audit: opening quote removed — slide leads with stats and the framing line.)*
 
-**Headline:**
-> *"Six builders. Multidisciplinary. Multifamily-deep. Eleven apps already shipped together — today we choose two to scale."*
+**Headline:** *Together, we bring.*
 
 **Stat strip (5 columns, JetBrains Mono with CountUp animation):**
 
 | 51+ | 850K+ | 15 of 20 | 11 | 1 |
 |:---:|:---:|:---:|:---:|:---:|
-| years multifamily proptech | multifamily homes touched | top multifamily operators reachable via warm intro | shipped Real Tech artifacts | patent-pending technology |
+| years multifamily proptech | multifamily homes touched | top operators within warm-intro reach | artifacts already shipped | patent-pending technology |
 
-**Links footer:** [realtechconsultant.com](https://realtechconsultant.com) · 5 LinkedIns from slide 7
+**Links footer:** [realtechconsultant.com](https://realtechconsultant.com)
 
 Source: [`04-team-bios.md`](04-team-bios.md), [`05-founder-market-fit.md`](05-founder-market-fit.md)
 
@@ -205,35 +265,28 @@ Source: [`04-team-bios.md`](04-team-bios.md), [`05-founder-market-fit.md`](05-fo
 
 ## SECTION 3 — The Portfolio (Buffet)
 
+*Per audit: the standalone "The Portfolio." divider was removed; the section opens directly with the scorecard teaser.*
+
 *Section transition from Section 2: `dollyZoom` (camera dolly back; current slide miniaturizes into the buffet grid, `--dur-cinematic`)*
 
 ---
 
-### Slide 9 — Portfolio Scorecard
+### Slide 12 — Portfolio Scorecard (teaser)
 
-- **Layout:** `L7-Scorecard`
-- **Entry animation:** Header row `fadeUpStagger`; rows draw in top-to-bottom with `--stagger-tight`; weighted-total cells animate via `countUpReveal`
-- **Visual:** Full-width data table with color-coded scoring cells (red→amber→green). Sticky top row (criteria). Final column (Weighted) is bold + JetBrains Mono. The top 3 rows have a soft turquoise highlight band.
+- **Layout:** `L3-Statement` with a centered `scoreboard-teaser` block
+- **Entry animation:** Top-3 cards `fadeUpStagger` with `--stagger-tight`
+- **Visual:** Three rank-cards stacked: rank pill, app name, one-sentence tagline, weighted score in JetBrains Mono. *(Per audit: full table moved to slide 34. This slide is the teaser only.)*
 
-**Headline:** *Portfolio Scorecard — one row per app. Cofounders edit live.*
+**Headline:** *The scoreboard. A first look.*
 
-**Sub-caption:** *Source: [`03-decision-framework.md`](03-decision-framework.md). Weights total 100. Scores 1-10. Apps ordered by weighted total (tied: Channel Partner Portal & Life Events Suite at 7.4).*
+**Sub-caption:** *Nine weighted criteria, total of 100. We edit it live as a team after the buffet — jump to the editable view (slide 34).*
 
-**Table:**
+**Top-3 teaser:**
+1. Real Tech GTM — Built. Dog-fooded. Workflow engine. **8.7**
+2. Rovian.ai — Voice + Stripe shipped. Vapi infra ready. **8.0**
+3. Wedding Planner AI — 27-table schema. Paying customer live. **7.9**
 
-| App | Build (15) | Market (10) | GTM (12) | Channel (15) | Fit (18) | Moat (10) | Speed (10) | Capital (5) | Strategic (5) | **Weighted** |
-|-----|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| 1. Real Tech GTM | 9 | 8 | 9 | 10 | 9 | 7 | 9 | 9 | 10 | **8.7** |
-| 2. Rovian.ai | 9 | 10 | 9 | 8 | 7 | 7 | 8 | 7 | 6 | **8.0** |
-| 3. Wedding Planner AI | 9 | 8 | 8 | 8 | 8 | 8 | 7 | 7 | 7 | **7.9** |
-| 4. Channel Partner Portal | 1 | 8 | 9 | 9 | 10 | 9 | 5 | 5 | 9 | **7.4** |
-| 5. Life Events Suite | 8 | 7 | 7 | 8 | 8 | 8 | 6 | 6 | 8 | **7.4** |
-| 6. Kith | 10 | 7 | 5 | 7 | 7 | 7 | 5 | 9 | 6 | **6.9** |
-| 7. edgenote.ai | 10 | 6 | 6 | 6 | 6 | 7 | 5 | 9 | 5 | **6.5** |
-| 8. DealPayment | 5 | 6 | 6 | 7 | 7 | 10 | 4 | 4 | 6 | **6.3** |
-| 9. Cannabis HighTide | 4 | 6 | 7 | 8 | 5 | 6 | 6 | 5 | 4 | **6.0** |
-| 10. Rehabit | 1 | 6 | 4 | 3 | 6 | 6 | 3 | 4 | 7 | **4.1** |
-| 11. Baby Tracker (solo) | 4 | 4 | 3 | 3 | 3 | 3 | 3 | 7 | 4 | **3.5** |
+*+ 8 more apps — full editable table on the recommendation slide.*
 
 **Links footer:** [`03-decision-framework.md`](03-decision-framework.md)
 
@@ -275,17 +328,17 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 
 ### Slide 11 — #1 Real Tech GTM (productize what we already use)
 
-- **Visual:** Screenshot of [`Realtech2/Real-tech-llc-portfolio/app/admin/gtm`](../Realtech2/Real-tech-llc-portfolio/app/admin/gtm) admin dashboard — captured locally per [`screenshots/README.md`](screenshots/README.md). Inset chip showing "Always-on outbound · 11 live workflows"
+- **Visual:** Screenshot of [`Realtech2/Real-tech-llc-portfolio/app/admin/gtm`](../Realtech2/Real-tech-llc-portfolio/app/admin/gtm) admin dashboard — captured locally per [`screenshots/README.md`](screenshots/README.md). Inset chip showing "Workflow engine · 11 live workflows"
 - **Tagline:** *"The CRM your agency wishes it had — automated by the workflow engine your competitors can't ship."*
 - **Problem / Target customer:** Boutique consultancies, founders running outbound, marketing agencies — all running manual sequences across 5+ tools.
-- **Solution:** End-to-end GTM stack: lead capture → enrichment → sequenced outreach → call booking → CRM sync. One stack: prospects, researches, writes with AI, sends, follows up, triages replies, publishes content. 11 always-on workflows + 8 admin pages.
+- **Solution:** End-to-end GTM stack: lead capture → enrichment → sequenced outreach → call booking → CRM sync. One stack: prospects, researches, writes with AI, sends, follows up, triages replies, publishes content. 11 live workflows + 8 admin pages.
 - **Market size:** GTM/sales tooling — multi-billion category (Apollo $1.6B valuation, Clay $500M+, HubSpot Operations Hub mid-9-figures revenue). Target SOM $10M ARR within 3 years on a long tail of agencies.
 - **Top 3 competitors + our gap:** [Apollo.io](https://apollo.io) (database-led, weak workflow), [Clay.com](https://clay.com) (workflow-led, dependent on multiple tools), [HubSpot Operations Hub](https://hubspot.com/products/operations) (suite-locked). Our gap: **end-to-end + agency-native + we eat our own dog food**.
-- **Moat:** Productized 11 always-on workflows we use to sell consulting; the workflow library is the unfakeable moat.
+- **Moat:** Productized 11 live workflows we use to sell consulting; the workflow library is the unfakeable moat.
 - **Build status:** ~70% — admin pages built, automations live, billing/multi-tenancy still to wire.
 - **Path to first $10k MRR:** 50 customers @ $200/mo. Channel: warm-intro to Real Tech consulting clients + agencies in Justin's network.
 - **Channel Readiness:** Real Tech consulting client list + agency network; no third-party gating.
-- **Founder lead:** Jonathan + Halim ([Jonathan LinkedIn](https://www.linkedin.com/in/johnathan-sorisho-a2110052/))
+- **Founder lead:** Jonathan ([Jonathan LinkedIn](https://www.linkedin.com/in/johnathan-sorisho-a2110052/))
 - **Adoption likelihood:** **8.7 / 10** — *highest in portfolio. Build is real, GTM is mechanical, dog-fooding earns trust.*
 
 **Links footer:** [realtechconsultant.com/admin/gtm](https://realtechconsultant.com/admin/gtm) · [apollo.io](https://apollo.io) · [clay.com](https://clay.com) · [hubspot.com/products/operations](https://hubspot.com/products/operations) · [Jonathan LinkedIn](https://www.linkedin.com/in/johnathan-sorisho-a2110052/)
@@ -304,7 +357,7 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 - **Build status:** ~85% — backend/web/IaC shipped; missing wider voice script library and partner-billing gates.
 - **Path to first $10k MRR:** 100 customers @ $100/mo. Channel: Justin's BD into multifamily-adjacent service vendors; Vapi marketplace listing.
 - **Channel Readiness:** Vapi partner ecosystem + Justin's SMB service network.
-- **Founder lead:** Halim + Justin ([Braeden LinkedIn](https://www.linkedin.com/in/braedenscheer))
+- **Founder lead:** Jonathan + Tim · Halim engineering ([Halim LinkedIn](https://www.linkedin.com/in/abdelhalim-khaldi))
 - **Adoption likelihood:** **8.0 / 10**
 
 **Links footer:** [rovian.ai](https://rovian.ai) · [goodcall.com](https://goodcall.com) · [poly.ai](https://poly.ai) · [smith.ai](https://smith.ai) · [vapi.ai](https://vapi.ai) · [Halim LinkedIn](https://www.linkedin.com/in/abdelhalim-khaldi)
@@ -323,7 +376,7 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 - **Build status:** ~90% — full PRD ([WeddingTemplate/PRD.md](../WeddingTemplate/PRD.md)) shipped, paying customer ([Scott & Fiona](../Scott&Fiona)) live.
 - **Path to first $10k MRR:** 50 couples @ $199/yr + 30 planners @ $99/mo = ~$13k/yr + $36k/yr → first $10k MRR in 4-6 months.
 - **Channel Readiness:** Wedding professional partner channel ([`06-bundle-strategy.md`](06-bundle-strategy.md) §Channel 1).
-- **Founder lead:** Jonathan + Justin + Wil
+- **Founder lead:** Jonathan + Jordyn Stubblefield
 - **Adoption likelihood:** **7.9 / 10**
 
 **Links footer:** Customer URL TBD · [aisleplanner.com](https://aisleplanner.com) · [theknot.com](https://theknot.com) · [zola.com](https://zola.com) · [WeddingTemplate/PRD.md](../WeddingTemplate/PRD.md) · [Justin LinkedIn TBD]
@@ -435,7 +488,7 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 - **Build status:** **~40%** — v0 marketplace frontend live in dev.
 - **Path to first $10k MRR:** 10 operator partners @ $1k/mo. Channel: cannabis operator pipeline (named privately).
 - **Channel Readiness:** Pipeline confirmed; partners listed as "[Confidential — N partners in pipeline]" until cofounders approve naming.
-- **Founder lead:** Jonathan + cannabis operator partner
+- **Founder lead:** Jonathan + Halim + cannabis operator partner
 - **Adoption likelihood:** **6.0 / 10** *(federal regulatory exposure caps speed)*
 
 **Links footer:** [dutchie.com](https://dutchie.com) · [treez.io](https://treez.io) · [flowhub.com](https://flowhub.com) · [newfrontierdata.com](https://newfrontierdata.com)
@@ -455,16 +508,18 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 - **Build status:** **0% (concept).**
 - **Path to first $10k MRR:** Path A: 200 SaaS users @ $50/mo. Path B: 1 fix-and-flip exit funds the studio for a year.
 - **Channel Readiness:** Tim's real estate + LATAM relationships.
-- **Founder lead:** Tim + Halim
+- **Founder lead:** Jonathan
 - **Adoption likelihood:** **4.1 / 10** *(scoped down; revisit after recommendation vote)*
 
 **Links footer:** [propstream.com](https://propstream.com) · [mashvisor.com](https://mashvisor.com) · [dealmachine.com](https://dealmachine.com) · [nar.realtor](https://www.nar.realtor) · [Tim LinkedIn TBD]
 
 ---
 
-## SECTION 4.5 — Bundle Play
+## SECTION 4.5 — Strategy
 
-*Section transition from Section 4: `triadConverge` (three app slides fly into one stacked bundle slide, `--dur-cinematic`)*
+*Section transition from Section 4: `triadConverge` (three app slides fly into one stacked spotlight, `--dur-cinematic`)*
+
+*Per audit: the divider was renamed from "Bundle Play." → "Strategy." with blurb "Where the buffet starts paying compound interest." The bundle treatment is now consolidated to slide 26 only — the per-app Life Events Suite slide (slide 19) was reduced to a thin "anchor of the Strategy section" line to remove duplication.*
 
 ---
 
@@ -488,20 +543,22 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 
 ---
 
-### Slide 22 — Founder-Market Fit Matrix (the deck's "wow" moment)
+### Slide 27 — Founder-Market Fit Matrix (bucketed)
 
-- **Layout:** Custom variant of `L7-Scorecard` — matrix with team-photo column-headers and the multifamily proptech employer badges
-- **Entry animation:** Matrix rows `fadeUpStagger`; the multifamily proptech employer badges pulse in turquoise; `strokeDraw` on the four arrows from the multifamily proptech employer founders → Channel Partner Portal column
-- **Visual:** Matrix with rows = team, columns = apps, cells = ★/★★/★★★. **Bolded cells** are unfair advantages. **Bolded apps** are where cumulative team strength is unmatched. Channel Partner Portal column is highlighted gold; arrows from Jonathan/Justin/Braeden/Wil converge on it.
+- **Layout:** `L9-TeamGrid` reused as a bucketed `fmf-grid`. Three labeled `fmf-section` blocks: **Multifamily Products** (gold-bordered MF bucket), **Bundle · Life Events** (turquoise label), **Independent lanes** (salmon label).
+- **Entry animation:** Sections `fadeUpStagger`; cards within each section animate with `--stagger-tight`; MF cards carry a 2px gold border + soft gold glow.
+- **Visual:** Cards grouped by bucket, each card shows app name + star ratings per founder + lane note. Per audit:
+  - **Multifamily Products bucket:** Channel Partner Portal · Real Tech GTM · Rehabit
+  - Wedding Planner card now reflects Jonathan + Jordyn Stubblefield co-lead
+  - Cannabis adds Halim; Rehabit becomes Jonathan-only
 
 **Headline:** *Where each of us has unfair advantage.*
 
-**Footer callout (Inter caps, +0.08em, gold):** *5 of 6 founders/recruits = current multifamily proptech leadership · 3 VPs + 2 Directors · 51+ combined years multifamily proptech*
+**Sub-caption:** *Bucketed by lane. Gold-bordered cards = the Multifamily Products bucket where the team's combined depth is unmatched. **MF** = currently leading inside multifamily proptech.*
 
-**Killer-insight quote (centered below the matrix in Fraunces):**
-> *"The only column where four founders' ★★★ ratings stack is Channel Partner Portal. That column is also the only one with three current multifamily proptech leaders converging."*
+**Footer callout:** *5 of 7 founders/recruits = current/former multifamily proptech leadership · 3 VPs + 2 Directors · 51+ combined years · Tim = crypto / legal / LATAM lane (independent)*
 
-**Links footer:** All 6 LinkedIn URLs from slide 7 · Source: [`05-founder-market-fit.md`](05-founder-market-fit.md)
+**Links footer:** All 7 LinkedIn URLs from slide 9 · Source: [`05-founder-market-fit.md`](05-founder-market-fit.md)
 
 ---
 
@@ -511,36 +568,57 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 
 ---
 
-### Slide 23 — Competition Map
+### Slide 30 — Competition Map (real quadrant SVG)
 
 - **Layout:** `L4-TwoColumn` (visual right)
 - **Entry animation:** Quadrant axes `strokeDraw`; competitor dots `fadeUpStagger` with `--stagger-tight`
-- **Visual:** 2×2 quadrant chart for the **top 3 candidates** (GTM, Rovian, Channel Partner Portal). Axes: X = build completeness, Y = founder-market fit. Each candidate plotted with logo. Competitors plotted as smaller dots. Real Tech entries land in the upper-right "ship + fit" quadrant.
+- **Visual:** Hand-tuned inline SVG `quadrant-map`. Axes: X = build completeness, Y = founder-market fit. Real Tech dots in branded colors (gold = GTM, turquoise = Rovian, salmon = CP Portal). Competitor dots in muted grey from [`02-competitive-landscape.md`](02-competitive-landscape.md). Quadrant labels: SHIP + FIT (turquoise), FIT NOT BUILT (gold), BUILT WEAK FIT (salmon), RISKY (muted).
 
-**Headline:** *Where our top 3 land vs. the field.*
+**Headline:** *Top three vs. the field.*
 
-**Sub-caption:** *Logos hyperlink. Competitors plotted from [`02-competitive-landscape.md`](02-competitive-landscape.md).*
+**Body bullets:**
+- **Real Tech GTM** — upper right. Built and dog-fooded.
+- **Rovian.ai** — upper right. Voice + Stripe shipped.
+- **Channel Partner Portal** — upper left. Highest fit on the board.
 
-**Links footer:** Top competitor URLs for top-3 candidates: [apollo.io](https://apollo.io) · [clay.com](https://clay.com) · [goodcall.com](https://goodcall.com) · [poly.ai](https://poly.ai) · [servicechannel.com](https://servicechannel.com) · [buildingengines.com](https://buildingengines.com)
+**Links footer:** [apollo.io](https://apollo.io) · [clay.com](https://clay.com) · [goodcall.com](https://goodcall.com) · [poly.ai](https://poly.ai) · [servicechannel.com](https://servicechannel.com) · [buildingengines.com](https://buildingengines.com)
 
 ---
 
-### Slide 24 — Why Now
+### Risks (moved from Appendix to immediately follow Slide 30)
 
-- **Layout:** `L3-Statement`
-- **Entry animation:** `fadeUpStagger`; tailwind icons rotate in 90° per `--dur-medium`
-- **Visual:** Five-icon strip across the bottom representing the five tailwinds (AI · Voice · Local-first · Automation · Multifamily proptech wave). Background: warm-grey.
+- **Layout:** `L-Risks` (`layout-risks`) — card grid, not a dense table
+- **Entry animation:** `fadeUpStagger` on the section, `--stagger-tight` on the cards
+- **Visual:** One card per app. Each card carries a Lucide hazard icon, app name, colored likelihood pill (turquoise / gold / salmon / coral), and a one-line risk + mitigation. Border-inline-start color-codes likelihood at a glance.
 
-**Headline (Fraunces, display-md):** *Five tailwinds. One window.*
+**Headline:** *What kills each app. And what we'd do.*
 
-**Body (5 short rows):**
-1. **AI tailwinds** — generation cost collapsed; integration is the new differentiation
-2. **Voice** — Vapi-class infra makes vertical voice agents cheap
-3. **Local-first** — privacy backlash + on-device LLMs = edgenote-style category emerging
-4. **Automation** — every business wants always-on AI-driven workflows but can't operate them solo
-5. **Multifamily proptech** — the multifamily proptech employer NYSE listing validated the category; vendor layer still empty
+**Sub-caption:** *A pre-mortem for every bet. Stating the failure mode out loud is how we plan around it.*
 
-**Links footer:** [cbinsights.com](https://www.cbinsights.com) · [nmhc.org](https://www.nmhc.org) · [theknotworldwide.com](https://www.theknotworldwide.com/about) · [vapi.ai](https://vapi.ai)
+**Likelihood pills:**
+- Med-High: Channel Partner Portal · Rovian
+- Medium: Real Tech GTM · Wedding Planner · Cannabis · DealPayment
+- Low-Med: Kith · Baby Tracker · edgenote
+- High (Path B): Rehabit
+
+**Links footer:** [`01-app-research.md`](01-app-research.md)
+
+---
+
+### Slide 31 — Why now (3-pillar)
+
+- **Layout:** `L3-Statement` with three `why-pillar` cards
+- **Entry animation:** `fadeUpStagger` on headline; cards with `--stagger-tight`
+- **Visual:** Three cards each with a Lucide icon header (turquoise) + Fraunces title + body. *(Per audit: rewritten from 5 disconnected tailwinds to 3 tight pillars; "always-on workflows" tailwind removed.)*
+
+**Headline:** *Why now. Three pillars.*
+
+**Three pillars:**
+1. **AI is cheap.** Generation costs collapsed. Integration — not the model — is the new moat.
+2. **The multifamily window is open.** Public-market validation arrived. The operator-vendor layer didn't — and incumbents haven't shipped it.
+3. **The team is already inside it.** Five of seven of us lead inside multifamily proptech today. Eleven shipped artifacts say we ship.
+
+**Links footer:** [cbinsights.com](https://www.cbinsights.com) · [nmhc.org](https://www.nmhc.org) · [vapi.ai](https://vapi.ai)
 
 ---
 
@@ -568,17 +646,22 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 
 ---
 
-### Slide 26 — Weighted Scorecard (the "decision" view)
+### Slide 34 — Weighted Scorecard (editable + recommendation callout)
 
-- **Layout:** `L7-Scorecard` (same data as slide 9, but the **Weighted** column is foregrounded; rows sortable by header in the live deck)
-- **Entry animation:** Same as slide 9 (`countUpReveal` on weighted totals)
-- **Visual:** Identical table from slide 9 but with two highlighted bands: **top 3 (8.7 / 8.0 / 7.9)** in soft turquoise, and the **two #4 ties (Channel Partner Portal & Life Events Suite at 7.4)** in a soft gold band. Right side: a "Sensitivity Analysis" panel showing rank shifts under Scenarios A/B/C from [`03-decision-framework.md`](03-decision-framework.md).
+- **Layout:** `L7-Scorecard` with `layout-scorecard-editable` modifier
+- **Entry animation:** `fadeUpStagger` on headline + recommendation callout
+- **Visual:** The full 11-row × 9-criteria scorecard. Every score cell is `contenteditable="true"` with a 44pt min-height for touch. The Weighted column recomputes live as you edit (sum × weight / 100). Edits persist to `localStorage` so cofounder changes survive a page reload during the meeting. A **Reset to defaults** button restores the original scoring. A gradient "Recommended top 2" callout at the top names Real Tech GTM + Channel Partner Portal.
+- **Wiring:** [`deck-revealjs/js/scorecard.js`](deck-revealjs/js/scorecard.js) attached after `slide-effects.js`.
 
-**Headline:** *The scorecard, scored.*
+**Headline:** *The scoreboard, scored. Edit live.*
 
-**Sub-caption:** *Top 3 robust to reasonable re-weighting. The team picks based on appetite (cash-flow vs. brand-build).*
+**Recommended top 2 callout:**
+- **Real Tech GTM** · built and dog-fooded.
+- **Channel Partner Portal** · once-in-a-decade founder-market-fit bet.
 
-**Links footer:** [`03-decision-framework.md`](03-decision-framework.md)
+**Sub-caption:** *Tap any score cell to edit. Weighted column recomputes live. Edits persist on this device.*
+
+**Links footer:** [Methodology](https://github.com/jsorisho715/realtechpitch/blob/main/03-decision-framework.md)
 
 ---
 
@@ -636,26 +719,7 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 
 ---
 
-### Slide 29 — Resource Allocation
-
-- **Layout:** `L4-TwoColumn` (visual right)
-- **Entry animation:** Bars `strokeDraw` left-to-right (resource allocation visualized as horizontal bar chart)
-- **Visual:** Right column — horizontal bar chart showing engineering, marketing, capital allocation across the chosen top 2 + maintenance + consulting. Left column — short rationale.
-
-**Headline:** *Resource allocation per top-2 pick.*
-
-**Body (assumes Path A):**
-
-| Resource | Real Tech GTM | Channel Partner Portal | Maintenance + Consulting |
-|----------|:---:|:---:|:---:|
-| Engineering (Halim's time) | 40% | 40% | 20% |
-| Marketing | 50% | 30% | 20% |
-| Capital | 30% | 40% | 30% |
-| BD (Justin's time) | 30% | 60% | 10% |
-
-**Sub-caption:** *Numbers debatable. Logic: Channel Partner Portal needs more capital + BD because it's at 1% build; GTM needs more marketing because the product is the easier sale.*
-
-**Links footer:** *(none)*
+*Per audit: the Resource Allocation slide was deleted. Resource conversation moves into the follow-up working session that comes out of slide 45 (30-60-90).*
 
 ---
 
@@ -700,21 +764,22 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 
 ---
 
-### Slide 32 — Partnership Channels
+### Slide 41 — Partnership Channels (5 chips)
 
 - **Layout:** `L4-TwoColumn` (visual left, content right)
 - **Entry animation:** `fadeUpStagger`; per-channel chip `imageBlurReveal`
-- **Visual:** Left column — 4-chip grid, one chip per founder owning that channel:
+- **Visual:** Left column — 5-chip grid, one chip per founder owning that channel. *(Per audit: Johnathan added as the 5th chip — studio leadership, multifamily operator network, consulting pipeline.)*
+  - **Johnathan chip** — studio leadership · multifamily operator network · consulting pipeline
   - **Justin chip** — event industry (photographers · florists · venues)
   - **Braeden chip** — multifamily via multifamily operator network
   - **Wil chip** — multifamily product community + Worcester Polytechnic alumni
   - **Tim chip** — LATAM + crypto + legal
 
-**Headline:** *Four channels. Four owners.*
+**Headline:** *Five channels. Five owners.*
 
 **Body (right column):** Per-channel one-liner about target vertical, named (or anonymized) partners, and how warm intros are activated post-NDA.
 
-**Links footer:** All 4 founder LinkedIns
+**Links footer:** All 5 founder LinkedIns
 
 ---
 
@@ -763,53 +828,26 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 
 ---
 
-### Slide 35 — 90-Day Plan
+### Slide 45 — 30 · 60 · 90 (collective) + Next Steps
 
-- **Layout:** `L4-TwoColumn` (visual left, content right)
-- **Entry animation:** Timeline ticks `strokeDraw`; milestones `fadeUpStagger`
-- **Visual:** Left column — vertical timeline (Day 0 → Day 90) with 6 named milestones. Right column — focus, hires, milestones, revenue target.
+- **Layout:** `L3-Statement` with a `milestone-grid` (3 columns) + `next-steps` strip
+- **Entry animation:** `fadeUpStagger` on headline; columns with `--stagger-tight`
+- **Visual:** Three milestone columns (Day 30 · 60 · 90), each with bulleted **outcomes** (no named owners — owners assigned in a follow-up working session). Below the grid: a turquoise-tinted "Next Steps (collective)" strip with three actions the room agrees to before leaving.
 
-**Headline:** *Day 1 → Day 90.*
+*(Per audit: replaces the previous three sequential 90 / 180 / 365 slides. Outcomes only. Owners assigned later.)*
 
-**Body:**
-- **Focus:** Top-2 picks plus consulting
-- **Hires:** No new full-time hires; activate Founding Executive Pool selectively post-NDA
-- **Milestones:** GTM v1 productization · Channel Partner Portal v0 wireframes + 5 named pilot conversations · 3 new consulting clients · Mutual NDA executed by all 6
-- **Revenue target:** $50k consulting ARR closed + $5k MRR from GTM productization
+**Headline:** *30 · 60 · 90 — what we walk out with.*
 
-**Links footer:** *(none)*
+**Sub-caption:** *Calendar milestones. Outcomes the room agrees to. Owners are the team — we assign in a follow-up working session.*
 
----
+**Day 30:** Mutual NDA executed by all signatories · Top 2 picks ratified · Backburner list published · GTM productization sprint scoped · first 5 pilot conversations opened.
+**Day 60:** GTM v1 productized + first paying agency customer · Channel Partner Portal v0 wireframes reviewed by 3 named operators · 2 new consulting engagements signed.
+**Day 90:** $50k consulting ARR closed + $5k MRR from GTM · 2 Channel Portal pilots in flight · 5 retained consulting clients · capital path decided (bootstrap, F&F, or seed).
 
-### Slide 36 — 6-Month Plan
-
-- **Layout:** `L4-TwoColumn` (visual left, content right)
-- **Entry animation:** Same as slide 35
-- **Visual:** Same timeline visual, extended to Day 180.
-
-**Headline:** *Day 91 → Day 180.*
-
-**Body:**
-- **Customer count:** 25 GTM customers · 2 Channel Partner Portal pilots · 5 retained consulting clients
-- **ARR:** $150k consulting + $50k product ARR = ~$200k combined
-- **Hire #1:** First full-time engineer (under Halim) or first full-time BD (under Justin) — whichever bottleneck binds first
-
-**Links footer:** *(none)*
-
----
-
-### Slide 37 — 12-Month Plan
-
-- **Layout:** `L4-TwoColumn` (visual left, content right)
-- **Entry animation:** Same as slide 35
-- **Visual:** Same timeline, extended to Day 365. Decision diamond at the end: profitability vs. raise.
-
-**Headline:** *Day 181 → Day 365.*
-
-**Body:**
-- **Targets:** $500k–$1M ARR combined; 50 product customers; 3 Channel Partner Portal customers
-- **Decision point:** Sustained profitability path? Continue bootstrapping. Need acceleration? Raise a small seed.
-- **Two-year preview:** Bundle Phase 2 (Baby Tracker integration), Cannabis Phase 2 (named operator), DealPayment patent grant (assumed)
+**Next steps (collective):**
+1. Pick a recurring 60-min weekly cadence with all signatories.
+2. Open a shared milestone calendar — outcomes only, no owner names.
+3. Schedule the working session that turns these milestones into named owners.
 
 **Links footer:** *(none)*
 
@@ -904,54 +942,7 @@ Each app slide has the standard `L5-AppSlide` zone layout: header strip (logo + 
 
 ---
 
-### Slide 42 — Team Full Bios
-
-- **Layout:** `L9-TeamGrid` extended (6 cards, each card expanded with full bio paragraph from [`04-team-bios.md`](04-team-bios.md))
-- **Entry animation:** `fadeUpStagger`
-- **Visual:** Same 6-photo grid as slide 7, but each card opens to show: career arc · education · LinkedIn · what they bring.
-
-**Headline:** *The full picture.*
-
-**Links footer:** All 6 LinkedIn URLs · Source: [`04-team-bios.md`](04-team-bios.md)
-
----
-
-### Slide 43 — Brand & Deliverables Gallery
-
-- **Layout:** `L9-TeamGrid` repurposed as 12-card brand gallery
-- **Entry animation:** `fadeUpStagger` with `--stagger-tight`; `cardTilt3D` on hover
-- **Visual:** 12 cards: 1 Real Tech parent + 10 product brands + 1 GTM admin. Each card: logo · color stripe · live URL.
-
-**Headline:** *Eleven brand artifacts. One studio.*
-
-**Links footer:** All product URLs · Source: [`07-brand-architecture.md`](07-brand-architecture.md)
-
----
-
-### Slide 44 — Risk Register
-
-- **Layout:** `L7-Scorecard`
-- **Entry animation:** Rows `fadeUpStagger` with `--stagger-tight`
-- **Visual:** Per-app risk table. Columns: app · primary risk · likelihood · mitigation. Color coding on likelihood (green/amber/red).
-
-**Headline:** *What kills each app.*
-
-**Per-app risk register (selected highlights — full table from [`01-app-research.md`](01-app-research.md)):**
-
-| App | Primary risk | Likelihood | Mitigation |
-|-----|--------------|:---:|------------|
-| Real Tech GTM | Apollo/Clay launch agency-native bundle | Medium | Speed: ship multi-tenant + agency-pricing first |
-| Rovian | Vapi/OpenAI ship vertical voice template | Medium-High | Vertical scripts + dealer-integration moat |
-| Wedding Planner | The Knot acquires a planner-CRM | Medium | Lock in B2B planner customers fast |
-| Channel Partner Portal | the multifamily proptech employer ships an in-house version | Medium-High | Move before incumbents prioritize; 4-of-6 founders give us inside read |
-| Cannabis | Federal regulatory shift (positive or negative) | Medium | Operator-led growth; not capital-intensive |
-| DealPayment | SEC clarification on tokenized escrow | Medium | Off-ramp via partner; legal counsel via Tim |
-| Kith | Apple/Google "Family" suite native ship | Low-Medium | Privacy + multi-moment + grandma-grade UX wedge |
-| Baby Tracker | Apple Health acquisition risk | Low-Medium | Bundle anchor; not standalone bet |
-| edgenote | Apple ships on-device Notes Plus | Low-Medium | Stay ahead on workflow + community |
-| Rehabit | Real estate cycle / capital tightening | High (Path B) | Default to Path A (SaaS) until cycle turns |
-
-**Links footer:** [`01-app-research.md`](01-app-research.md)
+*Per audit: the Team Full Bios slide and the Brand & Deliverables Gallery slide were both deleted as duplicative of slide 9 (team) and slide 8 (shipped) respectively. The Risk Register has been moved out of the appendix to immediately follow slide 30 (Competition Map) — see the entry above titled "Risks (moved from Appendix to immediately follow Slide 30)."*
 
 ---
 
